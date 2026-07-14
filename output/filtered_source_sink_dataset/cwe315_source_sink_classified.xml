@@ -1,0 +1,1013 @@
+<?xml version='1.0' encoding='utf-8'?>
+<container>
+  <testcase testcase_index="1">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::bad" />
+      <comment_flaw line="43" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::bad" />
+      <comment_fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodG2B" />
+      <comment_flaw line="74" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodG2B" />
+      <comment_flaw line="87" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodB2G" />
+      <comment_fix line="90" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="43" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="87" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="90" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="same_function_line_order">
+      <fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="74" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_01::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_01.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="2">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_02::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="3">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_03::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="4">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java">
+      <comment_flaw line="45" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::bad" />
+      <comment_flaw line="58" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::bad" />
+      <comment_fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B1" />
+      <comment_flaw line="94" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B1" />
+      <comment_fix line="107" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B2" />
+      <comment_flaw line="127" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B2" />
+      <comment_flaw line="140" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G1" />
+      <comment_fix line="158" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G1" />
+      <comment_flaw line="180" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G2" />
+      <comment_fix line="192" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="45" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="58" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="140" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="158" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="180" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="192" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="94" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="107" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="127" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_04::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="5">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java">
+      <comment_flaw line="45" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::bad" />
+      <comment_flaw line="58" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::bad" />
+      <comment_fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B1" />
+      <comment_flaw line="94" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B1" />
+      <comment_fix line="107" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B2" />
+      <comment_flaw line="127" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B2" />
+      <comment_flaw line="141" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G1" />
+      <comment_fix line="159" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G1" />
+      <comment_flaw line="181" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G2" />
+      <comment_fix line="193" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="45" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="58" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="141" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="159" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="181" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="193" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="94" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="107" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="127" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_05::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="6">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java">
+      <comment_flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::bad" />
+      <comment_flaw line="56" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::bad" />
+      <comment_fix line="77" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B1" />
+      <comment_flaw line="92" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B1" />
+      <comment_fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B2" />
+      <comment_flaw line="125" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B2" />
+      <comment_flaw line="138" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G1" />
+      <comment_fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G1" />
+      <comment_flaw line="178" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G2" />
+      <comment_fix line="190" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="56" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="138" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="178" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="190" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="77" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="92" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="125" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_06::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="7">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java">
+      <comment_flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::bad" />
+      <comment_flaw line="56" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::bad" />
+      <comment_fix line="77" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B1" />
+      <comment_flaw line="92" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B1" />
+      <comment_fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B2" />
+      <comment_flaw line="125" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B2" />
+      <comment_flaw line="138" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G1" />
+      <comment_fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G1" />
+      <comment_flaw line="178" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G2" />
+      <comment_fix line="190" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="56" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="138" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="178" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="190" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="77" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="92" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="125" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_07::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="8">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java">
+      <comment_flaw line="51" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::bad" />
+      <comment_flaw line="64" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::bad" />
+      <comment_fix line="85" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B1" />
+      <comment_flaw line="100" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B1" />
+      <comment_fix line="113" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B2" />
+      <comment_flaw line="133" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B2" />
+      <comment_flaw line="146" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G1" />
+      <comment_fix line="164" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G1" />
+      <comment_flaw line="186" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G2" />
+      <comment_fix line="198" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="51" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="64" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="146" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="164" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="186" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="198" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="85" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="100" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="113" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="133" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_08::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="9">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_09::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="10">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_10::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="11">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B1" />
+      <comment_fix line="101" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B2" />
+      <comment_flaw line="121" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B2" />
+      <comment_flaw line="134" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G1" />
+      <comment_fix line="152" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G1" />
+      <comment_flaw line="174" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G2" />
+      <comment_fix line="186" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="134" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="152" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="174" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="186" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="101" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="121" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_11::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="12">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_12.java">
+      <comment_fix line="91" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodG2B" />
+      <comment_flaw line="130" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodG2B" />
+      <comment_flaw line="145" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodB2G" />
+      <comment_fix line="174" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodB2G" />
+    </file>
+    <flow type="b2g" flow_index="2" classification_method="multi_comment_line_extrema">
+      <flaw line="145" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_12.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="174" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_12.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="multi_comment_line_extrema">
+      <fix line="91" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_12.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="130" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_12::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_12.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="13">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_13::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="14">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::bad" />
+      <comment_flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B1" />
+      <comment_flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B1" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B2" />
+      <comment_flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B2" />
+      <comment_flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G1" />
+      <comment_fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G1" />
+      <comment_flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G2" />
+      <comment_fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="51" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="133" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="151" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="173" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="185" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="87" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="120" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_14::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="15">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java">
+      <comment_flaw line="40" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::bad" />
+      <comment_flaw line="54" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::bad" />
+      <comment_fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B1" />
+      <comment_flaw line="95" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B1" />
+      <comment_fix line="115" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B2" />
+      <comment_flaw line="136" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B2" />
+      <comment_flaw line="156" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G1" />
+      <comment_fix line="173" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G1" />
+      <comment_flaw line="196" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G2" />
+      <comment_fix line="209" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="40" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="54" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="156" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="173" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="same_function_line_order">
+      <flaw line="196" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="209" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b1" flow_index="4" classification_method="same_function_line_order">
+      <fix line="79" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="95" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="5" classification_method="same_function_line_order">
+      <fix line="115" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="136" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_15::goodG2B2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="16">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java">
+      <comment_flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::bad" />
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::bad" />
+      <comment_fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodG2B" />
+      <comment_flaw line="77" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodG2B" />
+      <comment_flaw line="93" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodB2G" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="93" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="same_function_line_order">
+      <fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="77" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_16::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_16.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="17">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java">
+      <comment_flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::bad" />
+      <comment_flaw line="49" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::bad" />
+      <comment_fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodG2B" />
+      <comment_flaw line="75" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodG2B" />
+      <comment_flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodB2G" />
+      <comment_fix line="93" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="49" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="93" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="same_function_line_order">
+      <fix line="62" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="75" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_17::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_17.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="18">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java">
+      <comment_flaw line="41" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::bad" />
+      <comment_flaw line="53" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::badSink" />
+      <comment_flaw line="78" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G1" />
+      <comment_fix line="95" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G1Sink" />
+      <comment_flaw line="117" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G2" />
+      <comment_fix line="128" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G2Sink" />
+      <comment_fix line="148" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodG2B" />
+      <comment_flaw line="167" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="41" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="function_name_rule">
+      <flaw line="78" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="95" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G1Sink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="function_name_rule">
+      <flaw line="117" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="128" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodB2G2Sink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="4" classification_method="function_name_rule">
+      <fix line="148" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="167" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_21::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_21.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="19">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a.java">
+      <comment_flaw line="42" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::bad" />
+      <comment_flaw line="70" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodB2G1" />
+      <comment_flaw line="85" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodB2G2" />
+      <comment_fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodG2B" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::badSink" />
+      <comment_fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodB2G1Sink" />
+      <comment_fix line="76" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodB2G2Sink" />
+      <comment_flaw line="100" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="42" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g1" flow_index="2" classification_method="function_name_rule">
+      <flaw line="70" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodB2G1" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodB2G1Sink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="b2g2" flow_index="3" classification_method="function_name_rule">
+      <flaw line="85" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodB2G2" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="76" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodB2G2Sink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="4" classification_method="function_name_rule">
+      <fix line="100" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="100" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_22b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="20">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java">
+      <comment_flaw line="40" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::bad" />
+      <comment_flaw line="50" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::bad" />
+      <comment_fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodG2B" />
+      <comment_flaw line="89" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodG2B" />
+      <comment_flaw line="105" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodB2G" />
+      <comment_fix line="113" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="40" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="50" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="same_function_line_order">
+      <flaw line="105" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="113" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="same_function_line_order">
+      <fix line="72" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="89" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_31::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_31.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="21">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java">
+      <comment_flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::badSink" />
+      <comment_flaw line="48" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::bad" />
+      <comment_flaw line="65" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodG2BSink" />
+      <comment_fix line="78" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodG2B" />
+      <comment_fix line="94" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodB2GSink" />
+      <comment_flaw line="115" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="48" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="115" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="94" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="78" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="65" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_41::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_41.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="22">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::badSource" />
+      <comment_flaw line="50" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::bad" />
+      <comment_fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodG2BSource" />
+      <comment_flaw line="82" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodG2B" />
+      <comment_flaw line="95" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodB2GSource" />
+      <comment_fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::badSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="50" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="95" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodB2GSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodG2BSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="82" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_42::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_42.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="23">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java">
+      <comment_flaw line="41" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::badSink" />
+      <comment_flaw line="53" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::bad" />
+      <comment_flaw line="72" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodG2BSink" />
+      <comment_fix line="85" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodG2B" />
+      <comment_fix line="103" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodB2GSink" />
+      <comment_flaw line="124" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="53" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="41" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="124" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="103" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="85" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="72" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_45::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_45.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="24">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::goodG2B" />
+      <comment_flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::badSink" />
+      <comment_flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::goodG2BSink" />
+      <comment_fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_51b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="25">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::goodG2B" />
+      <comment_flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::badSink" />
+      <comment_flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::goodG2BSink" />
+      <comment_fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_52c.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="26">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::goodG2B" />
+      <comment_flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::badSink" />
+      <comment_flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::goodG2BSink" />
+      <comment_fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_53d.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="27">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::goodG2B" />
+      <comment_flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::badSink" />
+      <comment_flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::goodG2BSink" />
+      <comment_fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="54" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="45" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_54e.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="28">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a.java">
+      <comment_flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::bad" />
+      <comment_flaw line="53" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::goodG2B" />
+      <comment_fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::badSource" />
+      <comment_fix line="52" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::goodG2BSource" />
+      <comment_flaw line="73" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::goodB2GSource" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::badSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="73" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::goodB2GSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="52" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b::goodG2BSource" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61b.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="53" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_61a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="29">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::bad" />
+      <comment_fix line="60" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::goodG2B" />
+      <comment_flaw line="83" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b.java">
+      <comment_flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::badSink" />
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::goodG2BSink" />
+      <comment_fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="83" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="60" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_66b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="30">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a.java">
+      <comment_flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::bad" />
+      <comment_fix line="65" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::goodG2B" />
+      <comment_flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b.java">
+      <comment_flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::badSink" />
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::goodG2BSink" />
+      <comment_fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="65" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_67b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="31">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a.java">
+      <comment_flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::goodG2B" />
+      <comment_flaw line="78" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b.java">
+      <comment_flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::badSink" />
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::goodG2BSink" />
+      <comment_fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="78" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_68b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="32">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::bad" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::goodG2B" />
+      <comment_flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b.java">
+      <comment_flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::badSink" />
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::goodG2BSink" />
+      <comment_fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="35" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="79" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="57" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_71b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="33">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a.java">
+      <comment_flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::bad" />
+      <comment_fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::goodG2B" />
+      <comment_flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b.java">
+      <comment_flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::badSink" />
+      <comment_flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::goodG2BSink" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_72b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="34">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a.java">
+      <comment_flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::bad" />
+      <comment_fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::goodG2B" />
+      <comment_flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b.java">
+      <comment_flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::badSink" />
+      <comment_flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::goodG2BSink" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_73b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="35">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a.java">
+      <comment_flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::bad" />
+      <comment_fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::goodG2B" />
+      <comment_flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b.java">
+      <comment_flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::badSink" />
+      <comment_flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::goodG2BSink" />
+      <comment_fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="39" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="36" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="88" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="58" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="63" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="48" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_74b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="36">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a.java">
+      <comment_flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::bad" />
+      <comment_fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::goodG2B" />
+      <comment_flaw line="168" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::goodB2G" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b.java">
+      <comment_flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::badSink" />
+      <comment_flaw line="102" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::goodG2BSink" />
+      <comment_fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::goodB2GSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="43" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="47" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::badSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="168" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="156" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::goodB2GSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="105" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="102" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b::goodG2BSink" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_75b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="37">
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_bad.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_bad::action" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodB2G.java">
+      <comment_fix line="32" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodB2G::action" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodG2B.java">
+      <comment_flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodG2B::action" />
+    </file>
+    <file path="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a.java">
+      <comment_flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::bad" />
+      <comment_fix line="59" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::goodG2B" />
+      <comment_flaw line="81" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::goodB2G" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="38" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::bad" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_bad::action" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
+      <flaw line="81" code="data = credentials.getUserName() + &quot;:&quot; + (new String(credentials.getPassword()));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::goodB2G" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a.java" origin="comment_flaw" role="source" safety="bad" />
+      <fix line="32" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodB2G::action" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodB2G.java" origin="comment_fix" role="sink" safety="good" />
+    </flow>
+    <flow type="g2b" flow_index="3" classification_method="function_name_rule">
+      <fix line="59" code="{" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a::goodG2B" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="34" code="response.addCookie(new Cookie(&quot;auth&quot;, data));" function="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodG2B::action" file="CWE315_Plaintext_Storage_in_Cookie__Servlet_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+</container>

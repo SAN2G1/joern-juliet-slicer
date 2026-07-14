@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<container>
+  <testcase testcase_index="1">
+    <file path="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01.java">
+      <comment_flaw line="22" code="[INLINE] ()" function="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01::helperBad" />
+      <comment_flaw line="34" code="[INLINE] REENTRANT_LOCK_BAD.unlock();" function="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01::helperBad" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="22" code="[INLINE] ()" function="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01::helperBad" file="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="34" code="[INLINE] REENTRANT_LOCK_BAD.unlock();" function="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01::helperBad" file="CWE832_Unlock_Not_Locked__ReentrantLock_Servlet_01.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+</container>

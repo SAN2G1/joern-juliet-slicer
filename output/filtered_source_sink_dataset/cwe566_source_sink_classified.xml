@@ -1,0 +1,717 @@
+<?xml version='1.0' encoding='utf-8'?>
+<container>
+  <testcase testcase_index="1">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01.java">
+      <comment_flaw line="34" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::bad" />
+      <comment_flaw line="57" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::bad" />
+      <comment_fix line="115" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::goodG2B" />
+      <comment_flaw line="138" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="34" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="57" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
+      <fix line="115" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="138" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_01.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="2">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_02.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="3">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_03.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="4">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java">
+      <comment_flaw line="42" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::bad" />
+      <comment_flaw line="72" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::bad" />
+      <comment_fix line="133" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B1" />
+      <comment_flaw line="158" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B1" />
+      <comment_fix line="212" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B2" />
+      <comment_flaw line="242" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="42" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="72" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="133" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="158" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="212" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="242" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_04.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="5">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java">
+      <comment_flaw line="42" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::bad" />
+      <comment_flaw line="72" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::bad" />
+      <comment_fix line="133" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B1" />
+      <comment_flaw line="158" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B1" />
+      <comment_fix line="212" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B2" />
+      <comment_flaw line="242" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="42" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="72" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="133" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="158" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="212" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="242" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_05.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="6">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java">
+      <comment_flaw line="41" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::bad" />
+      <comment_flaw line="71" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::bad" />
+      <comment_fix line="132" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B1" />
+      <comment_flaw line="157" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B1" />
+      <comment_fix line="211" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B2" />
+      <comment_flaw line="241" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="41" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="71" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="132" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="157" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="211" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="241" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_06.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="7">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java">
+      <comment_flaw line="41" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::bad" />
+      <comment_flaw line="71" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::bad" />
+      <comment_fix line="132" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B1" />
+      <comment_flaw line="157" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B1" />
+      <comment_fix line="211" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B2" />
+      <comment_flaw line="241" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="41" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="71" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="132" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="157" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="211" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="241" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_07.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="8">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java">
+      <comment_flaw line="49" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::bad" />
+      <comment_flaw line="79" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::bad" />
+      <comment_fix line="140" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B1" />
+      <comment_flaw line="165" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B1" />
+      <comment_fix line="219" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B2" />
+      <comment_flaw line="249" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="49" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="79" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="140" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="165" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="219" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="249" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_08.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="9">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_09.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="10">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_10.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="11">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_11.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="12">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::bad" />
+      <comment_flaw line="66" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::bad" />
+      <comment_fix line="121" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::goodG2B" />
+      <comment_flaw line="152" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="66" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
+      <fix line="121" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="152" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_12.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="13">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_13.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="14">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B1" />
+      <comment_flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B1" />
+      <comment_fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B2" />
+      <comment_flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="151" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="205" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="235" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_14.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="15">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java">
+      <comment_flaw line="37" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::bad" />
+      <comment_flaw line="67" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::bad" />
+      <comment_fix line="128" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B1" />
+      <comment_flaw line="153" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B1" />
+      <comment_fix line="209" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B2" />
+      <comment_flaw line="239" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B2" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="37" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="67" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
+      <fix line="128" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="153" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="same_function_line_order">
+      <fix line="209" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="239" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_15.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="16">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16.java">
+      <comment_flaw line="36" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::bad" />
+      <comment_flaw line="61" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::bad" />
+      <comment_fix line="116" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::goodG2B" />
+      <comment_flaw line="141" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="36" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="61" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
+      <fix line="116" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="141" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_16.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="17">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17.java">
+      <comment_flaw line="34" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::bad" />
+      <comment_flaw line="56" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::bad" />
+      <comment_fix line="110" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::goodG2B" />
+      <comment_flaw line="132" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="34" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="56" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
+      <fix line="110" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="132" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_17.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="18">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java">
+      <comment_flaw line="60" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::bad" />
+      <comment_flaw line="114" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::bad_source" />
+      <comment_flaw line="165" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B1" />
+      <comment_fix line="226" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B1_source" />
+      <comment_flaw line="262" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B2" />
+      <comment_fix line="316" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B2_source" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="114" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::bad_source" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="60" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
+      <fix line="226" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B1_source" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="165" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="function_name_rule">
+      <fix line="316" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B2_source" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="262" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_21.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="19">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a.java">
+      <comment_flaw line="61" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::bad" />
+      <comment_flaw line="148" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::goodG2B1" />
+      <comment_flaw line="224" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::goodG2B2" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b.java">
+      <comment_flaw line="32" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::badSource" />
+      <comment_fix line="58" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::goodG2B1Source" />
+      <comment_fix line="73" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::goodG2B2Source" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="32" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::badSource" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="61" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
+      <fix line="58" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::goodG2B1Source" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="148" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::goodG2B1" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b2" flow_index="3" classification_method="function_name_rule">
+      <fix line="73" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b::goodG2B2Source" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22b.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="224" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a::goodG2B2" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_22a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="20">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31.java">
+      <comment_flaw line="37" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::bad" />
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::bad" />
+      <comment_fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::goodG2B" />
+      <comment_flaw line="154" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
+      <flaw line="37" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
+      <fix line="126" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="154" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_31.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="21">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41.java">
+      <comment_flaw line="52" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::badSink" />
+      <comment_flaw line="104" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::bad" />
+      <comment_flaw line="138" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::goodG2BSink" />
+      <comment_fix line="191" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="104" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="52" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="191" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="138" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_41.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="22">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42.java">
+      <comment_flaw line="33" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::badSource" />
+      <comment_flaw line="64" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::bad" />
+      <comment_fix line="116" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::goodG2BSource" />
+      <comment_flaw line="147" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="33" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::badSource" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="64" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="116" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::goodG2BSource" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="147" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_42.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="23">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45.java">
+      <comment_flaw line="57" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::badSink" />
+      <comment_flaw line="110" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::bad" />
+      <comment_flaw line="146" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::goodG2BSink" />
+      <comment_fix line="199" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="110" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="57" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="199" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="146" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_45.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="24">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a.java">
+      <comment_flaw line="29" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a::bad" />
+      <comment_fix line="45" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b.java">
+      <comment_flaw line="52" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b::badSink" />
+      <comment_flaw line="124" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="29" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="52" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="45" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="124" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_51b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="25">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a::bad" />
+      <comment_fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c::badSink" />
+      <comment_flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_52c.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="26">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a::bad" />
+      <comment_fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d::badSink" />
+      <comment_flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_53d.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="27">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a::bad" />
+      <comment_fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e::badSink" />
+      <comment_flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="125" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_54e.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="28">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a.java">
+      <comment_flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a::bad" />
+      <comment_flaw line="132" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b::badSource" />
+      <comment_fix line="41" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b::goodG2BSource" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b::badSource" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="41" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b::goodG2BSource" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61b.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="132" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_61a.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="29">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a::bad" />
+      <comment_fix line="48" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b.java">
+      <comment_flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b::badSink" />
+      <comment_flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="48" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_66b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="30">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a::bad" />
+      <comment_fix line="53" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b.java">
+      <comment_flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b::badSink" />
+      <comment_flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="53" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_67b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="31">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a::bad" />
+      <comment_fix line="45" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b::badSink" />
+      <comment_flaw line="126" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="45" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="126" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_68b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="32">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a::bad" />
+      <comment_fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b.java">
+      <comment_flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b::badSink" />
+      <comment_flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="54" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="46" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="127" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_71b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="33">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a.java">
+      <comment_flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a::bad" />
+      <comment_fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b.java">
+      <comment_flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b::badSink" />
+      <comment_flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_72b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="34">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a.java">
+      <comment_flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a::bad" />
+      <comment_fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b.java">
+      <comment_flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b::badSink" />
+      <comment_flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_73b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="35">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a.java">
+      <comment_flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a::bad" />
+      <comment_fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b.java">
+      <comment_flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b::badSink" />
+      <comment_flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="31" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="55" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="51" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="128" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_74b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="36">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a.java">
+      <comment_flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a::bad" />
+      <comment_fix line="93" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a::goodG2B" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b.java">
+      <comment_flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b::badSink" />
+      <comment_flaw line="182" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b::goodG2BSink" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="35" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="65" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b::badSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="93" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="182" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b::goodG2BSink" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_75b.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+  <testcase testcase_index="37">
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_bad.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_bad::action" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_goodG2B.java">
+      <comment_flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_goodG2B::action" />
+    </file>
+    <file path="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a.java">
+      <comment_flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a::bad" />
+      <comment_fix line="47" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a::goodG2B" />
+    </file>
+    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
+      <flaw line="30" code="data = request.getParameter(&quot;id&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a::bad" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a.java" origin="comment_flaw" role="source" safety="bad" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_bad::action" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+    <flow type="g2b" flow_index="2" classification_method="function_name_rule">
+      <fix line="47" code="data = &quot;10&quot;;" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a::goodG2B" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81a.java" origin="comment_fix" role="source" safety="good" />
+      <flaw line="53" code="IO.writeString(&quot;bad() - result requested: &quot; + data +&quot;\n&quot;);" function="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_goodG2B::action" file="CWE566_Authorization_Bypass_Through_SQL_Primary__Servlet_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
+    </flow>
+  </testcase>
+</container>
