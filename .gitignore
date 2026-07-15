@@ -12,8 +12,12 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Settings
+deps/
+.env
 
-# Large/generated datasets copied into this project
+ 
+#Large/generated datasets copied into this project
 juliet-java-test-suite/
 java_sard_source_sink/
 joern/
