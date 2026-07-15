@@ -10,6 +10,7 @@
 6. ./setting.sh 파일을 실행한다. 
 7. flow_filter.py 
 8. `python3 cpg_builder.py output/filtered_source_sink_dataset/cwe15_source_sink_classified.xml`
+9. script/ 폴더 아래에 run_pdg_slice.sh 을 실행할 때 환경 변수 PATH를 joern-cli에 맞게 잘 조정해주어야 한다.
 
 ``` bash
 swlab@swlab:~/Documents/swvul/joern-juliet-slicer$ python3 cpg_builder.py     output/filtered_source_sink_dataset/cwe15_source_sink_classified.xml

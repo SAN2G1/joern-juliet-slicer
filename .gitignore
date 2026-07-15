@@ -15,7 +15,7 @@ Thumbs.db
 # Settings
 deps/
 .env
-
+workspace/
  
 #Large/generated datasets copied into this project
 juliet-java-test-suite/

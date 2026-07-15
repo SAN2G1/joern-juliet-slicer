@@ -172,10 +172,34 @@ def source_root_for_cwe(juliet_dir: Path, number: str) -> Path:
     return cwe_module if cwe_module.is_dir() else juliet_dir
 
 
-def family_prefix(java_path: str) -> str | None:
-    """Return the shared Juliet prefix for names such as ..._53a.java."""
-    match = re.fullmatch(r"(.+_\d+)[a-z]\.java", Path(java_path).name)
+def testcase_group_prefix(java_path: str) -> str | None:
+    """Extract the common prefix through a Juliet flow variant number.
+
+    These files all produce the same prefix ending in ``_81``::
+
+        Example_81a.java
+        Example_81_base.java
+        Example_81_bad.java
+        Example_81_goodG2B.java
+
+    A single-file name such as ``Example_01.java`` also has a valid prefix, but
+    it only collects itself when no related suffix files exist.
+    """
+    stem = Path(java_path).stem
+    match = re.fullmatch(r"(.+_\d+)(?:[a-z]|_[A-Za-z0-9_]+)?", stem)
     return match.group(1) if match else None
+
+
+def belongs_to_testcase_group(file_name: str, prefix: str) -> bool:
+    """Return whether a Java filename belongs to the given Juliet group."""
+    stem = Path(file_name).stem
+    if stem == prefix:
+        return True
+    suffix = stem.removeprefix(prefix) if stem.startswith(prefix) else ""
+    return bool(
+        re.fullmatch(r"[a-z]", suffix)
+        or re.fullmatch(r"_[A-Za-z0-9_]+", suffix)
+    )
 
 
 def build_java_index(
@@ -191,12 +215,12 @@ def build_java_index(
         prefix
         for testcase in testcases
         for java_path in testcase.java_paths
-        if (prefix := family_prefix(java_path))
+        if (prefix := testcase_group_prefix(java_path))
     }
     candidates: dict[str, list[Path]] = defaultdict(list)
     for candidate in source_root.rglob("*.java"):
         belongs_to_family = any(
-            re.fullmatch(re.escape(prefix) + r"[a-z]\.java", candidate.name)
+            belongs_to_testcase_group(candidate.name, prefix)
             for prefix in wanted_prefixes
         )
         if candidate.name in wanted_names or belongs_to_family:
@@ -224,18 +248,17 @@ def build_java_index(
 def testcase_source_names(
     testcase: Testcase, java_index: dict[str, Path]
 ) -> list[str]:
-    """Include intermediate files such as 53b/53c when XML names 53a/53d."""
+    """Include every Java file in the testcase's Juliet filename group."""
     exact_names = {Path(path).name for path in testcase.java_paths}
     prefixes = {
         prefix
         for java_path in testcase.java_paths
-        if (prefix := family_prefix(java_path))
+        if (prefix := testcase_group_prefix(java_path))
     }
     names = []
     for name in java_index:
         in_family = any(
-            re.fullmatch(re.escape(prefix) + r"[a-z]\.java", name)
-            for prefix in prefixes
+            belongs_to_testcase_group(name, prefix) for prefix in prefixes
         )
         if name in exact_names or in_family:
             names.append(name)
@@ -259,13 +282,15 @@ def copy_testcase_sources(
     java_index: dict[str, Path],
     source_root: Path,
     temp_dir: Path,
-) -> None:
+) -> list[str]:
     """Copy only this testcase's Java files, preserving their package paths."""
-    for source_name in testcase_source_names(testcase, java_index):
+    source_names = testcase_source_names(testcase, java_index)
+    for source_name in source_names:
         source = java_index[source_name]
         destination = temp_dir / source.relative_to(source_root)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+    return source_names
 
 
 def cpg_path(output_dir: Path, number: str, testcase: Testcase) -> Path:
@@ -331,14 +356,22 @@ def build_one_testcase(
         prefix=f"cwe{number}_{testcase.index}_sources_"
     ) as temp_name:
         temp_dir = Path(temp_name)
-        copy_testcase_sources(testcase, java_index, source_root, temp_dir)
+        copied_names = copy_testcase_sources(
+            testcase, java_index, source_root, temp_dir
+        )
         command = joern_command(joern_parse, temp_dir, output_path, jars)
-        source_count = len(testcase_source_names(testcase, java_index))
+        if sys.stdout.isatty() and position > 1:
+            print()
+        print(
+            f"Testcase {testcase.index} copied sources ({len(copied_names)}): "
+            + ", ".join(copied_names),
+            flush=True,
+        )
         show_progress(
             position,
             total,
             testcase,
-            f"building ({source_count} files, {testcase.flow_count} flows)",
+            f"building ({len(copied_names)} files, {testcase.flow_count} flows)",
         )
         completed = subprocess.run(
             command,
