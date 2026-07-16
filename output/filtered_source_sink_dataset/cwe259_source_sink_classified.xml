@@ -1301,8 +1301,6 @@
   <testcase testcase_index="73">
     <file path="CWE259_Hard_Coded_Password__kerberosKey_75a.java">
       <comment_flaw line="35" code="data = &quot;7e5tc4s3&quot;;" function="CWE259_Hard_Coded_Password__kerberosKey_75a::bad" />
-      <comment_fix line="95" code="try" function="CWE259_Hard_Coded_Password__kerberosKey_75a::goodG2B" />
-      <comment_flaw line="110" code="/* serialize data to a byte array */" function="CWE259_Hard_Coded_Password__kerberosKey_75a::goodG2B" />
     </file>
     <file path="CWE259_Hard_Coded_Password__kerberosKey_75b.java">
       <comment_flaw line="48" code="KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);" function="CWE259_Hard_Coded_Password__kerberosKey_75b::badSink" />
@@ -1310,10 +1308,6 @@
     <flow type="b2b" flow_index="1" classification_method="function_name_rule">
       <flaw line="35" code="data = &quot;7e5tc4s3&quot;;" function="CWE259_Hard_Coded_Password__kerberosKey_75a::bad" file="CWE259_Hard_Coded_Password__kerberosKey_75a.java" origin="comment_flaw" role="source" safety="bad" />
       <flaw line="48" code="KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);" function="CWE259_Hard_Coded_Password__kerberosKey_75b::badSink" file="CWE259_Hard_Coded_Password__kerberosKey_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
-    <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
-      <fix line="95" code="try" function="CWE259_Hard_Coded_Password__kerberosKey_75a::goodG2B" file="CWE259_Hard_Coded_Password__kerberosKey_75a.java" origin="comment_fix" role="source" safety="good" />
-      <flaw line="110" code="/* serialize data to a byte array */" function="CWE259_Hard_Coded_Password__kerberosKey_75a::goodG2B" file="CWE259_Hard_Coded_Password__kerberosKey_75a.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="74">
@@ -1917,8 +1911,6 @@
   <testcase testcase_index="110">
     <file path="CWE259_Hard_Coded_Password__passwordAuth_75a.java">
       <comment_flaw line="35" code="data = &quot;7e5tc4s3&quot;;" function="CWE259_Hard_Coded_Password__passwordAuth_75a::bad" />
-      <comment_fix line="95" code="try" function="CWE259_Hard_Coded_Password__passwordAuth_75a::goodG2B" />
-      <comment_flaw line="110" code="/* serialize data to a byte array */" function="CWE259_Hard_Coded_Password__passwordAuth_75a::goodG2B" />
     </file>
     <file path="CWE259_Hard_Coded_Password__passwordAuth_75b.java">
       <comment_flaw line="46" code="PasswordAuthentication credentials = new PasswordAuthentication(&quot;user&quot;, data.toCharArray());" function="CWE259_Hard_Coded_Password__passwordAuth_75b::badSink" />
@@ -1926,10 +1918,6 @@
     <flow type="b2b" flow_index="1" classification_method="function_name_rule">
       <flaw line="35" code="data = &quot;7e5tc4s3&quot;;" function="CWE259_Hard_Coded_Password__passwordAuth_75a::bad" file="CWE259_Hard_Coded_Password__passwordAuth_75a.java" origin="comment_flaw" role="source" safety="bad" />
       <flaw line="46" code="PasswordAuthentication credentials = new PasswordAuthentication(&quot;user&quot;, data.toCharArray());" function="CWE259_Hard_Coded_Password__passwordAuth_75b::badSink" file="CWE259_Hard_Coded_Password__passwordAuth_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
-    <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
-      <fix line="95" code="try" function="CWE259_Hard_Coded_Password__passwordAuth_75a::goodG2B" file="CWE259_Hard_Coded_Password__passwordAuth_75a.java" origin="comment_fix" role="source" safety="good" />
-      <flaw line="110" code="/* serialize data to a byte array */" function="CWE259_Hard_Coded_Password__passwordAuth_75a::goodG2B" file="CWE259_Hard_Coded_Password__passwordAuth_75a.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="111">

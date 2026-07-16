@@ -577,8 +577,6 @@
   <testcase testcase_index="36">
     <file path="CWE321_Hard_Coded_Cryptographic_Key__basic_75a.java">
       <comment_flaw line="37" code="data = &quot;23 ~j;asn!@#/&gt;as&quot;;" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::bad" />
-      <comment_fix line="103" code="data = readerBuffered.readLine();" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::goodG2B" />
-      <comment_flaw line="111" code="/* serialize data to a byte array */" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::goodG2B" />
     </file>
     <file path="CWE321_Hard_Coded_Cryptographic_Key__basic_75b.java">
       <comment_flaw line="47" code="SecretKeySpec secretKeySpec = new SecretKeySpec(data.getBytes(&quot;UTF-8&quot;), &quot;AES&quot;);" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75b::badSink" />
@@ -586,10 +584,6 @@
     <flow type="b2b" flow_index="1" classification_method="function_name_rule">
       <flaw line="37" code="data = &quot;23 ~j;asn!@#/&gt;as&quot;;" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::bad" file="CWE321_Hard_Coded_Cryptographic_Key__basic_75a.java" origin="comment_flaw" role="source" safety="bad" />
       <flaw line="47" code="SecretKeySpec secretKeySpec = new SecretKeySpec(data.getBytes(&quot;UTF-8&quot;), &quot;AES&quot;);" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75b::badSink" file="CWE321_Hard_Coded_Cryptographic_Key__basic_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
-    <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
-      <fix line="103" code="data = readerBuffered.readLine();" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::goodG2B" file="CWE321_Hard_Coded_Cryptographic_Key__basic_75a.java" origin="comment_fix" role="source" safety="good" />
-      <flaw line="111" code="/* serialize data to a byte array */" function="CWE321_Hard_Coded_Cryptographic_Key__basic_75a::goodG2B" file="CWE321_Hard_Coded_Cryptographic_Key__basic_75a.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="37">

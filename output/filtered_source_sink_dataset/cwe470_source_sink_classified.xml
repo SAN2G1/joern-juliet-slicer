@@ -716,15 +716,9 @@
   </testcase>
   <testcase testcase_index="38">
     <file path="CWE470_Unsafe_Reflection__File_01.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_01::bad" />
-      <comment_flaw line="102" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_01::bad" />
       <comment_fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_01::goodG2B" />
       <comment_flaw line="123" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_01::bad" file="CWE470_Unsafe_Reflection__File_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="102" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_01::bad" file="CWE470_Unsafe_Reflection__File_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_01::goodG2B" file="CWE470_Unsafe_Reflection__File_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="123" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_01::goodG2B" file="CWE470_Unsafe_Reflection__File_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -732,17 +726,11 @@
   </testcase>
   <testcase testcase_index="39">
     <file path="CWE470_Unsafe_Reflection__File_02.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_02::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_02::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_02::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_02::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_02::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_02::bad" file="CWE470_Unsafe_Reflection__File_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_02::bad" file="CWE470_Unsafe_Reflection__File_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_02::goodG2B1" file="CWE470_Unsafe_Reflection__File_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_02::goodG2B1" file="CWE470_Unsafe_Reflection__File_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -754,17 +742,11 @@
   </testcase>
   <testcase testcase_index="40">
     <file path="CWE470_Unsafe_Reflection__File_03.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_03::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_03::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_03::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_03::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_03::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_03::bad" file="CWE470_Unsafe_Reflection__File_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_03::bad" file="CWE470_Unsafe_Reflection__File_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_03::goodG2B1" file="CWE470_Unsafe_Reflection__File_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_03::goodG2B1" file="CWE470_Unsafe_Reflection__File_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -776,17 +758,11 @@
   </testcase>
   <testcase testcase_index="41">
     <file path="CWE470_Unsafe_Reflection__File_04.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_04::bad" />
-      <comment_flaw line="115" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_04::bad" />
       <comment_fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_04::goodG2B1" />
       <comment_flaw line="141" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_04::goodG2B1" />
       <comment_fix line="155" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_04::goodG2B2" />
       <comment_flaw line="165" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_04::bad" file="CWE470_Unsafe_Reflection__File_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="115" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_04::bad" file="CWE470_Unsafe_Reflection__File_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_04::goodG2B1" file="CWE470_Unsafe_Reflection__File_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="141" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_04::goodG2B1" file="CWE470_Unsafe_Reflection__File_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -798,17 +774,11 @@
   </testcase>
   <testcase testcase_index="42">
     <file path="CWE470_Unsafe_Reflection__File_05.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_05::bad" />
-      <comment_flaw line="115" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_05::bad" />
       <comment_fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_05::goodG2B1" />
       <comment_flaw line="141" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_05::goodG2B1" />
       <comment_fix line="155" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_05::goodG2B2" />
       <comment_flaw line="165" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_05::bad" file="CWE470_Unsafe_Reflection__File_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="115" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_05::bad" file="CWE470_Unsafe_Reflection__File_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_05::goodG2B1" file="CWE470_Unsafe_Reflection__File_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="141" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_05::goodG2B1" file="CWE470_Unsafe_Reflection__File_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -820,17 +790,11 @@
   </testcase>
   <testcase testcase_index="43">
     <file path="CWE470_Unsafe_Reflection__File_06.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_06::bad" />
-      <comment_flaw line="114" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_06::bad" />
       <comment_fix line="135" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_06::goodG2B1" />
       <comment_flaw line="140" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_06::goodG2B1" />
       <comment_fix line="154" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_06::goodG2B2" />
       <comment_flaw line="164" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_06::bad" file="CWE470_Unsafe_Reflection__File_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="114" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_06::bad" file="CWE470_Unsafe_Reflection__File_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="135" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_06::goodG2B1" file="CWE470_Unsafe_Reflection__File_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="140" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_06::goodG2B1" file="CWE470_Unsafe_Reflection__File_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -842,17 +806,11 @@
   </testcase>
   <testcase testcase_index="44">
     <file path="CWE470_Unsafe_Reflection__File_07.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_07::bad" />
-      <comment_flaw line="114" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_07::bad" />
       <comment_fix line="135" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_07::goodG2B1" />
       <comment_flaw line="140" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_07::goodG2B1" />
       <comment_fix line="154" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_07::goodG2B2" />
       <comment_flaw line="164" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_07::bad" file="CWE470_Unsafe_Reflection__File_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="114" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_07::bad" file="CWE470_Unsafe_Reflection__File_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="135" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_07::goodG2B1" file="CWE470_Unsafe_Reflection__File_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="140" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_07::goodG2B1" file="CWE470_Unsafe_Reflection__File_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -864,17 +822,11 @@
   </testcase>
   <testcase testcase_index="45">
     <file path="CWE470_Unsafe_Reflection__File_08.java">
-      <comment_flaw line="65" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_08::bad" />
-      <comment_flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_08::bad" />
       <comment_fix line="143" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_08::goodG2B1" />
       <comment_flaw line="148" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_08::goodG2B1" />
       <comment_fix line="162" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_08::goodG2B2" />
       <comment_flaw line="172" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="65" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_08::bad" file="CWE470_Unsafe_Reflection__File_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_08::bad" file="CWE470_Unsafe_Reflection__File_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="143" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_08::goodG2B1" file="CWE470_Unsafe_Reflection__File_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="148" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_08::goodG2B1" file="CWE470_Unsafe_Reflection__File_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -886,17 +838,11 @@
   </testcase>
   <testcase testcase_index="46">
     <file path="CWE470_Unsafe_Reflection__File_09.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_09::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_09::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_09::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_09::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_09::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_09::bad" file="CWE470_Unsafe_Reflection__File_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_09::bad" file="CWE470_Unsafe_Reflection__File_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_09::goodG2B1" file="CWE470_Unsafe_Reflection__File_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_09::goodG2B1" file="CWE470_Unsafe_Reflection__File_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -908,17 +854,11 @@
   </testcase>
   <testcase testcase_index="47">
     <file path="CWE470_Unsafe_Reflection__File_10.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_10::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_10::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_10::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_10::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_10::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_10::bad" file="CWE470_Unsafe_Reflection__File_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_10::bad" file="CWE470_Unsafe_Reflection__File_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_10::goodG2B1" file="CWE470_Unsafe_Reflection__File_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_10::goodG2B1" file="CWE470_Unsafe_Reflection__File_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -930,17 +870,11 @@
   </testcase>
   <testcase testcase_index="48">
     <file path="CWE470_Unsafe_Reflection__File_11.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_11::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_11::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_11::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_11::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_11::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_11::bad" file="CWE470_Unsafe_Reflection__File_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_11::bad" file="CWE470_Unsafe_Reflection__File_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_11::goodG2B1" file="CWE470_Unsafe_Reflection__File_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_11::goodG2B1" file="CWE470_Unsafe_Reflection__File_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -952,15 +886,9 @@
   </testcase>
   <testcase testcase_index="49">
     <file path="CWE470_Unsafe_Reflection__File_12.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_12::bad" />
-      <comment_flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_12::bad" />
       <comment_fix line="124" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_12::goodG2B" />
       <comment_flaw line="135" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_12::bad" file="CWE470_Unsafe_Reflection__File_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_12::bad" file="CWE470_Unsafe_Reflection__File_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="124" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_12::goodG2B" file="CWE470_Unsafe_Reflection__File_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="135" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_12::goodG2B" file="CWE470_Unsafe_Reflection__File_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -968,17 +896,11 @@
   </testcase>
   <testcase testcase_index="50">
     <file path="CWE470_Unsafe_Reflection__File_13.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_13::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_13::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_13::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_13::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_13::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_13::bad" file="CWE470_Unsafe_Reflection__File_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_13::bad" file="CWE470_Unsafe_Reflection__File_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_13::goodG2B1" file="CWE470_Unsafe_Reflection__File_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_13::goodG2B1" file="CWE470_Unsafe_Reflection__File_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -990,17 +912,11 @@
   </testcase>
   <testcase testcase_index="51">
     <file path="CWE470_Unsafe_Reflection__File_14.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_14::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_14::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_14::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_14::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_14::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_14::bad" file="CWE470_Unsafe_Reflection__File_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_14::bad" file="CWE470_Unsafe_Reflection__File_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_14::goodG2B1" file="CWE470_Unsafe_Reflection__File_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_14::goodG2B1" file="CWE470_Unsafe_Reflection__File_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1012,17 +928,11 @@
   </testcase>
   <testcase testcase_index="52">
     <file path="CWE470_Unsafe_Reflection__File_15.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_15::bad" />
-      <comment_flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_15::bad" />
       <comment_fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_15::goodG2B1" />
       <comment_flaw line="136" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_15::goodG2B1" />
       <comment_fix line="152" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_15::goodG2B2" />
       <comment_flaw line="162" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_15::bad" file="CWE470_Unsafe_Reflection__File_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_15::bad" file="CWE470_Unsafe_Reflection__File_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_15::goodG2B1" file="CWE470_Unsafe_Reflection__File_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_15::goodG2B1" file="CWE470_Unsafe_Reflection__File_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1034,15 +944,9 @@
   </testcase>
   <testcase testcase_index="53">
     <file path="CWE470_Unsafe_Reflection__File_16.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_16::bad" />
-      <comment_flaw line="104" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_16::bad" />
       <comment_fix line="119" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_16::goodG2B" />
       <comment_flaw line="124" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_16::bad" file="CWE470_Unsafe_Reflection__File_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="104" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_16::bad" file="CWE470_Unsafe_Reflection__File_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="119" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_16::goodG2B" file="CWE470_Unsafe_Reflection__File_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="124" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_16::goodG2B" file="CWE470_Unsafe_Reflection__File_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1050,15 +954,9 @@
   </testcase>
   <testcase testcase_index="54">
     <file path="CWE470_Unsafe_Reflection__File_17.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_17::bad" />
-      <comment_flaw line="104" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_17::bad" />
       <comment_fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_17::goodG2B" />
       <comment_flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_17::bad" file="CWE470_Unsafe_Reflection__File_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="104" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_17::bad" file="CWE470_Unsafe_Reflection__File_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_17::goodG2B" file="CWE470_Unsafe_Reflection__File_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_17::goodG2B" file="CWE470_Unsafe_Reflection__File_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1066,17 +964,11 @@
   </testcase>
   <testcase testcase_index="55">
     <file path="CWE470_Unsafe_Reflection__File_21.java">
-      <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_21::bad" />
-      <comment_flaw line="70" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_21::bad_source" />
       <comment_flaw line="148" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_21::goodG2B1" />
       <comment_fix line="169" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_21::goodG2B1_source" />
       <comment_flaw line="185" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_21::goodG2B2" />
       <comment_fix line="199" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="70" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_21::bad_source" file="CWE470_Unsafe_Reflection__File_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_21::bad" file="CWE470_Unsafe_Reflection__File_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="169" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_21::goodG2B1_source" file="CWE470_Unsafe_Reflection__File_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="148" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_21::goodG2B1" file="CWE470_Unsafe_Reflection__File_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1088,19 +980,13 @@
   </testcase>
   <testcase testcase_index="56">
     <file path="CWE470_Unsafe_Reflection__File_22a.java">
-      <comment_flaw line="37" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_22a::bad" />
       <comment_flaw line="64" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_22a::goodG2B1" />
       <comment_flaw line="80" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_22a::goodG2B2" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_22b.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_22b::badSource" />
       <comment_fix line="125" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_22b::goodG2B1Source" />
       <comment_fix line="140" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_22b::badSource" file="CWE470_Unsafe_Reflection__File_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="37" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_22a::bad" file="CWE470_Unsafe_Reflection__File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="125" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_22b::goodG2B1Source" file="CWE470_Unsafe_Reflection__File_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="64" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_22a::goodG2B1" file="CWE470_Unsafe_Reflection__File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1112,15 +998,9 @@
   </testcase>
   <testcase testcase_index="57">
     <file path="CWE470_Unsafe_Reflection__File_31.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_31::bad" />
-      <comment_flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_31::bad" />
       <comment_fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_31::goodG2B" />
       <comment_flaw line="139" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_31::bad" file="CWE470_Unsafe_Reflection__File_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_31::bad" file="CWE470_Unsafe_Reflection__File_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_31::goodG2B" file="CWE470_Unsafe_Reflection__File_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="139" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_31::goodG2B" file="CWE470_Unsafe_Reflection__File_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1128,15 +1008,9 @@
   </testcase>
   <testcase testcase_index="58">
     <file path="CWE470_Unsafe_Reflection__File_41.java">
-      <comment_flaw line="36" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_41::badSink" />
-      <comment_flaw line="62" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_41::bad" />
       <comment_flaw line="123" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_41::goodG2BSink" />
       <comment_fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="62" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_41::bad" file="CWE470_Unsafe_Reflection__File_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="36" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_41::badSink" file="CWE470_Unsafe_Reflection__File_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="136" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_41::goodG2B" file="CWE470_Unsafe_Reflection__File_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="123" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_41::goodG2BSink" file="CWE470_Unsafe_Reflection__File_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1144,15 +1018,9 @@
   </testcase>
   <testcase testcase_index="59">
     <file path="CWE470_Unsafe_Reflection__File_42.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_42::badSource" />
-      <comment_flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_42::bad" />
       <comment_fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_42::goodG2BSource" />
       <comment_flaw line="132" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_42::badSource" file="CWE470_Unsafe_Reflection__File_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_42::bad" file="CWE470_Unsafe_Reflection__File_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_42::goodG2BSource" file="CWE470_Unsafe_Reflection__File_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="132" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_42::goodG2B" file="CWE470_Unsafe_Reflection__File_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1160,15 +1028,9 @@
   </testcase>
   <testcase testcase_index="60">
     <file path="CWE470_Unsafe_Reflection__File_45.java">
-      <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_45::badSink" />
-      <comment_flaw line="68" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_45::bad" />
       <comment_flaw line="131" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_45::goodG2BSink" />
       <comment_fix line="144" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="68" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_45::bad" file="CWE470_Unsafe_Reflection__File_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_45::badSink" file="CWE470_Unsafe_Reflection__File_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="144" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_45::goodG2B" file="CWE470_Unsafe_Reflection__File_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="131" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_45::goodG2BSink" file="CWE470_Unsafe_Reflection__File_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1176,17 +1038,11 @@
   </testcase>
   <testcase testcase_index="61">
     <file path="CWE470_Unsafe_Reflection__File_51a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_51a::bad" />
       <comment_fix line="114" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_51a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_51b.java">
-      <comment_flaw line="28" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_51b::badSink" />
       <comment_flaw line="40" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_51a::bad" file="CWE470_Unsafe_Reflection__File_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="28" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_51b::badSink" file="CWE470_Unsafe_Reflection__File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="114" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_51a::goodG2B" file="CWE470_Unsafe_Reflection__File_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="40" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_51b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1194,17 +1050,11 @@
   </testcase>
   <testcase testcase_index="62">
     <file path="CWE470_Unsafe_Reflection__File_52a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_52a::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_52a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_52c.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_52c::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_52a::bad" file="CWE470_Unsafe_Reflection__File_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_52c::badSink" file="CWE470_Unsafe_Reflection__File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_52a::goodG2B" file="CWE470_Unsafe_Reflection__File_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_52c::goodG2BSink" file="CWE470_Unsafe_Reflection__File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1212,17 +1062,11 @@
   </testcase>
   <testcase testcase_index="63">
     <file path="CWE470_Unsafe_Reflection__File_53a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_53a::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_53a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_53d.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_53d::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_53a::bad" file="CWE470_Unsafe_Reflection__File_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_53d::badSink" file="CWE470_Unsafe_Reflection__File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_53a::goodG2B" file="CWE470_Unsafe_Reflection__File_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_53d::goodG2BSink" file="CWE470_Unsafe_Reflection__File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1230,17 +1074,11 @@
   </testcase>
   <testcase testcase_index="64">
     <file path="CWE470_Unsafe_Reflection__File_54a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_54a::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_54a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_54e.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_54e::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_54a::bad" file="CWE470_Unsafe_Reflection__File_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_54e::badSink" file="CWE470_Unsafe_Reflection__File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_54a::goodG2B" file="CWE470_Unsafe_Reflection__File_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_54e::goodG2BSink" file="CWE470_Unsafe_Reflection__File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1248,17 +1086,11 @@
   </testcase>
   <testcase testcase_index="65">
     <file path="CWE470_Unsafe_Reflection__File_61a.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_61a::bad" />
       <comment_flaw line="48" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_61a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_61b.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_61b::badSource" />
       <comment_fix line="110" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_61b::badSource" file="CWE470_Unsafe_Reflection__File_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_61a::bad" file="CWE470_Unsafe_Reflection__File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="110" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_61b::goodG2BSource" file="CWE470_Unsafe_Reflection__File_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="48" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_61a::goodG2B" file="CWE470_Unsafe_Reflection__File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1266,17 +1098,11 @@
   </testcase>
   <testcase testcase_index="66">
     <file path="CWE470_Unsafe_Reflection__File_66a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_66a::bad" />
       <comment_fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_66a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_66b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_66b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_66a::bad" file="CWE470_Unsafe_Reflection__File_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_66b::badSink" file="CWE470_Unsafe_Reflection__File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_66a::goodG2B" file="CWE470_Unsafe_Reflection__File_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_66b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1284,17 +1110,11 @@
   </testcase>
   <testcase testcase_index="67">
     <file path="CWE470_Unsafe_Reflection__File_67a.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_67a::bad" />
       <comment_fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_67a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_67b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_67b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_67a::bad" file="CWE470_Unsafe_Reflection__File_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_67b::badSink" file="CWE470_Unsafe_Reflection__File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_67a::goodG2B" file="CWE470_Unsafe_Reflection__File_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_67b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1302,17 +1122,11 @@
   </testcase>
   <testcase testcase_index="68">
     <file path="CWE470_Unsafe_Reflection__File_68a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_68a::bad" />
       <comment_fix line="114" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_68a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_68b.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_68b::badSink" />
       <comment_flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_68a::bad" file="CWE470_Unsafe_Reflection__File_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_68b::badSink" file="CWE470_Unsafe_Reflection__File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="114" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_68a::goodG2B" file="CWE470_Unsafe_Reflection__File_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_68b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1320,17 +1134,11 @@
   </testcase>
   <testcase testcase_index="69">
     <file path="CWE470_Unsafe_Reflection__File_71a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_71a::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_71a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_71b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_71b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_71a::bad" file="CWE470_Unsafe_Reflection__File_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_71b::badSink" file="CWE470_Unsafe_Reflection__File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_71a::goodG2B" file="CWE470_Unsafe_Reflection__File_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_71b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1338,17 +1146,11 @@
   </testcase>
   <testcase testcase_index="70">
     <file path="CWE470_Unsafe_Reflection__File_72a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_72a::bad" />
       <comment_fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_72a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_72b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_72b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_72a::bad" file="CWE470_Unsafe_Reflection__File_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_72b::badSink" file="CWE470_Unsafe_Reflection__File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_72a::goodG2B" file="CWE470_Unsafe_Reflection__File_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_72b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1356,17 +1158,11 @@
   </testcase>
   <testcase testcase_index="71">
     <file path="CWE470_Unsafe_Reflection__File_73a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_73a::bad" />
       <comment_fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_73a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_73b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_73b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_73a::bad" file="CWE470_Unsafe_Reflection__File_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_73b::badSink" file="CWE470_Unsafe_Reflection__File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_73a::goodG2B" file="CWE470_Unsafe_Reflection__File_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_73b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1374,17 +1170,11 @@
   </testcase>
   <testcase testcase_index="72">
     <file path="CWE470_Unsafe_Reflection__File_74a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_74a::bad" />
       <comment_fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_74a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_74b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_74b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_74a::bad" file="CWE470_Unsafe_Reflection__File_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_74b::badSink" file="CWE470_Unsafe_Reflection__File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_74a::goodG2B" file="CWE470_Unsafe_Reflection__File_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_74b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1392,37 +1182,23 @@
   </testcase>
   <testcase testcase_index="73">
     <file path="CWE470_Unsafe_Reflection__File_75a.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_75a::bad" />
       <comment_fix line="160" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_75a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_75b.java">
-      <comment_flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_75b::badSink" />
       <comment_flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_75a::bad" file="CWE470_Unsafe_Reflection__File_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_75b::badSink" file="CWE470_Unsafe_Reflection__File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="160" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_75a::goodG2B" file="CWE470_Unsafe_Reflection__File_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_75b::goodG2BSink" file="CWE470_Unsafe_Reflection__File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="74">
-    <file path="CWE470_Unsafe_Reflection__File_81_bad.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_81_bad::action" />
-    </file>
     <file path="CWE470_Unsafe_Reflection__File_81_goodG2B.java">
       <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_81_goodG2B::action" />
     </file>
     <file path="CWE470_Unsafe_Reflection__File_81a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_81a::bad" />
       <comment_fix line="116" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE470_Unsafe_Reflection__File_81a::bad" file="CWE470_Unsafe_Reflection__File_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_81_bad::action" file="CWE470_Unsafe_Reflection__File_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__File_81a::goodG2B" file="CWE470_Unsafe_Reflection__File_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__File_81_goodG2B::action" file="CWE470_Unsafe_Reflection__File_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2858,15 +2634,9 @@
   </testcase>
   <testcase testcase_index="149">
     <file path="CWE470_Unsafe_Reflection__URLConnection_01.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_01::bad" />
-      <comment_flaw line="89" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_01::bad" />
       <comment_fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_01::goodG2B" />
       <comment_flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_01::bad" file="CWE470_Unsafe_Reflection__URLConnection_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="89" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_01::bad" file="CWE470_Unsafe_Reflection__URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_01::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_01::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2874,17 +2644,11 @@
   </testcase>
   <testcase testcase_index="150">
     <file path="CWE470_Unsafe_Reflection__URLConnection_02.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_02::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_02::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_02::bad" file="CWE470_Unsafe_Reflection__URLConnection_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_02::bad" file="CWE470_Unsafe_Reflection__URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_02::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2896,17 +2660,11 @@
   </testcase>
   <testcase testcase_index="151">
     <file path="CWE470_Unsafe_Reflection__URLConnection_03.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_03::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_03::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_03::bad" file="CWE470_Unsafe_Reflection__URLConnection_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_03::bad" file="CWE470_Unsafe_Reflection__URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_03::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2918,17 +2676,11 @@
   </testcase>
   <testcase testcase_index="152">
     <file path="CWE470_Unsafe_Reflection__URLConnection_04.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_04::bad" />
-      <comment_flaw line="101" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_04::bad" />
       <comment_fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B1" />
       <comment_flaw line="127" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B1" />
       <comment_fix line="141" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B2" />
       <comment_flaw line="151" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_04::bad" file="CWE470_Unsafe_Reflection__URLConnection_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="101" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_04::bad" file="CWE470_Unsafe_Reflection__URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="127" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_04::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2940,17 +2692,11 @@
   </testcase>
   <testcase testcase_index="153">
     <file path="CWE470_Unsafe_Reflection__URLConnection_05.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_05::bad" />
-      <comment_flaw line="101" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_05::bad" />
       <comment_fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B1" />
       <comment_flaw line="127" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B1" />
       <comment_fix line="141" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B2" />
       <comment_flaw line="151" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_05::bad" file="CWE470_Unsafe_Reflection__URLConnection_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="101" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_05::bad" file="CWE470_Unsafe_Reflection__URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="122" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="127" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_05::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2962,17 +2708,11 @@
   </testcase>
   <testcase testcase_index="154">
     <file path="CWE470_Unsafe_Reflection__URLConnection_06.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_06::bad" />
-      <comment_flaw line="100" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_06::bad" />
       <comment_fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B1" />
       <comment_flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B1" />
       <comment_fix line="140" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B2" />
       <comment_flaw line="150" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_06::bad" file="CWE470_Unsafe_Reflection__URLConnection_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="100" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_06::bad" file="CWE470_Unsafe_Reflection__URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_06::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2984,17 +2724,11 @@
   </testcase>
   <testcase testcase_index="155">
     <file path="CWE470_Unsafe_Reflection__URLConnection_07.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_07::bad" />
-      <comment_flaw line="100" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_07::bad" />
       <comment_fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B1" />
       <comment_flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B1" />
       <comment_fix line="140" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B2" />
       <comment_flaw line="150" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_07::bad" file="CWE470_Unsafe_Reflection__URLConnection_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="100" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_07::bad" file="CWE470_Unsafe_Reflection__URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="121" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_07::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3006,17 +2740,11 @@
   </testcase>
   <testcase testcase_index="156">
     <file path="CWE470_Unsafe_Reflection__URLConnection_08.java">
-      <comment_flaw line="63" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_08::bad" />
-      <comment_flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_08::bad" />
       <comment_fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B1" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B1" />
       <comment_fix line="148" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B2" />
       <comment_flaw line="158" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="63" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_08::bad" file="CWE470_Unsafe_Reflection__URLConnection_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="108" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_08::bad" file="CWE470_Unsafe_Reflection__URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_08::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3028,17 +2756,11 @@
   </testcase>
   <testcase testcase_index="157">
     <file path="CWE470_Unsafe_Reflection__URLConnection_09.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_09::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_09::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_09::bad" file="CWE470_Unsafe_Reflection__URLConnection_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_09::bad" file="CWE470_Unsafe_Reflection__URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_09::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3050,17 +2772,11 @@
   </testcase>
   <testcase testcase_index="158">
     <file path="CWE470_Unsafe_Reflection__URLConnection_10.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_10::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_10::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_10::bad" file="CWE470_Unsafe_Reflection__URLConnection_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_10::bad" file="CWE470_Unsafe_Reflection__URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_10::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3072,17 +2788,11 @@
   </testcase>
   <testcase testcase_index="159">
     <file path="CWE470_Unsafe_Reflection__URLConnection_11.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_11::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_11::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_11::bad" file="CWE470_Unsafe_Reflection__URLConnection_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_11::bad" file="CWE470_Unsafe_Reflection__URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_11::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3094,15 +2804,9 @@
   </testcase>
   <testcase testcase_index="160">
     <file path="CWE470_Unsafe_Reflection__URLConnection_12.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_12::bad" />
-      <comment_flaw line="95" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_12::bad" />
       <comment_fix line="110" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_12::goodG2B" />
       <comment_flaw line="121" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_12::bad" file="CWE470_Unsafe_Reflection__URLConnection_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="95" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_12::bad" file="CWE470_Unsafe_Reflection__URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="110" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_12::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="121" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_12::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3110,17 +2814,11 @@
   </testcase>
   <testcase testcase_index="161">
     <file path="CWE470_Unsafe_Reflection__URLConnection_13.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_13::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_13::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_13::bad" file="CWE470_Unsafe_Reflection__URLConnection_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_13::bad" file="CWE470_Unsafe_Reflection__URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_13::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3132,17 +2830,11 @@
   </testcase>
   <testcase testcase_index="162">
     <file path="CWE470_Unsafe_Reflection__URLConnection_14.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_14::bad" />
-      <comment_flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_14::bad" />
       <comment_fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B1" />
       <comment_flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B1" />
       <comment_fix line="134" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B2" />
       <comment_flaw line="144" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_14::bad" file="CWE470_Unsafe_Reflection__URLConnection_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="94" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_14::bad" file="CWE470_Unsafe_Reflection__URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_14::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3154,17 +2846,11 @@
   </testcase>
   <testcase testcase_index="163">
     <file path="CWE470_Unsafe_Reflection__URLConnection_15.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_15::bad" />
-      <comment_flaw line="96" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_15::bad" />
       <comment_fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B1" />
       <comment_flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B1" />
       <comment_fix line="138" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B2" />
       <comment_flaw line="148" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_15::bad" file="CWE470_Unsafe_Reflection__URLConnection_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_15::bad" file="CWE470_Unsafe_Reflection__URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="117" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_15::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3176,15 +2862,9 @@
   </testcase>
   <testcase testcase_index="164">
     <file path="CWE470_Unsafe_Reflection__URLConnection_16.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_16::bad" />
-      <comment_flaw line="90" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_16::bad" />
       <comment_fix line="105" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_16::goodG2B" />
       <comment_flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_16::bad" file="CWE470_Unsafe_Reflection__URLConnection_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="90" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_16::bad" file="CWE470_Unsafe_Reflection__URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="105" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_16::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_16::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3192,15 +2872,9 @@
   </testcase>
   <testcase testcase_index="165">
     <file path="CWE470_Unsafe_Reflection__URLConnection_17.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_17::bad" />
-      <comment_flaw line="91" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_17::bad" />
       <comment_fix line="104" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_17::goodG2B" />
       <comment_flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_17::bad" file="CWE470_Unsafe_Reflection__URLConnection_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="91" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_17::bad" file="CWE470_Unsafe_Reflection__URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="104" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_17::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="109" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_17::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3208,17 +2882,11 @@
   </testcase>
   <testcase testcase_index="166">
     <file path="CWE470_Unsafe_Reflection__URLConnection_21.java">
-      <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_21::bad" />
-      <comment_flaw line="68" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_21::bad_source" />
       <comment_flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B1" />
       <comment_fix line="155" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B1_source" />
       <comment_flaw line="171" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B2" />
       <comment_fix line="185" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="68" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_21::bad_source" file="CWE470_Unsafe_Reflection__URLConnection_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_21::bad" file="CWE470_Unsafe_Reflection__URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="155" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B1_source" file="CWE470_Unsafe_Reflection__URLConnection_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_21::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3230,19 +2898,13 @@
   </testcase>
   <testcase testcase_index="167">
     <file path="CWE470_Unsafe_Reflection__URLConnection_22a.java">
-      <comment_flaw line="37" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_22a::bad" />
       <comment_flaw line="64" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_22a::goodG2B1" />
       <comment_flaw line="80" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_22a::goodG2B2" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_22b.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_22b::badSource" />
       <comment_fix line="111" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_22b::goodG2B1Source" />
       <comment_fix line="126" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_22b::badSource" file="CWE470_Unsafe_Reflection__URLConnection_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="37" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_22a::bad" file="CWE470_Unsafe_Reflection__URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="111" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_22b::goodG2B1Source" file="CWE470_Unsafe_Reflection__URLConnection_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="64" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_22a::goodG2B1" file="CWE470_Unsafe_Reflection__URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3254,15 +2916,9 @@
   </testcase>
   <testcase testcase_index="168">
     <file path="CWE470_Unsafe_Reflection__URLConnection_31.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_31::bad" />
-      <comment_flaw line="97" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_31::bad" />
       <comment_fix line="118" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_31::goodG2B" />
       <comment_flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_31::bad" file="CWE470_Unsafe_Reflection__URLConnection_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="97" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_31::bad" file="CWE470_Unsafe_Reflection__URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="118" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_31::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_31::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3270,15 +2926,9 @@
   </testcase>
   <testcase testcase_index="169">
     <file path="CWE470_Unsafe_Reflection__URLConnection_41.java">
-      <comment_flaw line="36" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_41::badSink" />
-      <comment_flaw line="61" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_41::bad" />
       <comment_flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_41::goodG2BSink" />
       <comment_fix line="123" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="61" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_41::bad" file="CWE470_Unsafe_Reflection__URLConnection_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="36" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_41::badSink" file="CWE470_Unsafe_Reflection__URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="123" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_41::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="110" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_41::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3286,15 +2936,9 @@
   </testcase>
   <testcase testcase_index="170">
     <file path="CWE470_Unsafe_Reflection__URLConnection_42.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_42::badSource" />
-      <comment_flaw line="96" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_42::bad" />
       <comment_fix line="108" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_42::goodG2BSource" />
       <comment_flaw line="119" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_42::badSource" file="CWE470_Unsafe_Reflection__URLConnection_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_42::bad" file="CWE470_Unsafe_Reflection__URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="108" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_42::goodG2BSource" file="CWE470_Unsafe_Reflection__URLConnection_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="119" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_42::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3302,15 +2946,9 @@
   </testcase>
   <testcase testcase_index="171">
     <file path="CWE470_Unsafe_Reflection__URLConnection_45.java">
-      <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_45::badSink" />
-      <comment_flaw line="67" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_45::bad" />
       <comment_flaw line="118" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_45::goodG2BSink" />
       <comment_fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="67" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_45::bad" file="CWE470_Unsafe_Reflection__URLConnection_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_45::badSink" file="CWE470_Unsafe_Reflection__URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="131" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_45::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="118" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_45::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3318,17 +2956,11 @@
   </testcase>
   <testcase testcase_index="172">
     <file path="CWE470_Unsafe_Reflection__URLConnection_51a.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_51a::bad" />
       <comment_fix line="101" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_51a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_51b.java">
-      <comment_flaw line="28" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_51b::badSink" />
       <comment_flaw line="40" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_51a::bad" file="CWE470_Unsafe_Reflection__URLConnection_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="28" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_51b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="101" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_51a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="40" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_51b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3336,17 +2968,11 @@
   </testcase>
   <testcase testcase_index="173">
     <file path="CWE470_Unsafe_Reflection__URLConnection_52a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_52a::bad" />
       <comment_fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_52a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_52c.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_52c::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_52a::bad" file="CWE470_Unsafe_Reflection__URLConnection_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_52c::badSink" file="CWE470_Unsafe_Reflection__URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_52a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_52c::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3354,17 +2980,11 @@
   </testcase>
   <testcase testcase_index="174">
     <file path="CWE470_Unsafe_Reflection__URLConnection_53a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_53a::bad" />
       <comment_fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_53a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_53d.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_53d::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_53a::bad" file="CWE470_Unsafe_Reflection__URLConnection_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_53d::badSink" file="CWE470_Unsafe_Reflection__URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_53a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_53d::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3372,17 +2992,11 @@
   </testcase>
   <testcase testcase_index="175">
     <file path="CWE470_Unsafe_Reflection__URLConnection_54a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_54a::bad" />
       <comment_fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_54a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_54e.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_54e::badSink" />
       <comment_flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_54a::bad" file="CWE470_Unsafe_Reflection__URLConnection_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_54e::badSink" file="CWE470_Unsafe_Reflection__URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_54a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="41" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_54e::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3390,17 +3004,11 @@
   </testcase>
   <testcase testcase_index="176">
     <file path="CWE470_Unsafe_Reflection__URLConnection_61a.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_61a::bad" />
       <comment_flaw line="48" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_61a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_61b.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_61b::badSource" />
       <comment_fix line="97" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_61b::badSource" file="CWE470_Unsafe_Reflection__URLConnection_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_61a::bad" file="CWE470_Unsafe_Reflection__URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="97" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_61b::goodG2BSource" file="CWE470_Unsafe_Reflection__URLConnection_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="48" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_61a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3408,17 +3016,11 @@
   </testcase>
   <testcase testcase_index="177">
     <file path="CWE470_Unsafe_Reflection__URLConnection_66a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_66a::bad" />
       <comment_fix line="104" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_66a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_66b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_66b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_66a::bad" file="CWE470_Unsafe_Reflection__URLConnection_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_66b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="104" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_66a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_66b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3426,17 +3028,11 @@
   </testcase>
   <testcase testcase_index="178">
     <file path="CWE470_Unsafe_Reflection__URLConnection_67a.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_67a::bad" />
       <comment_fix line="109" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_67a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_67b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_67b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_67a::bad" file="CWE470_Unsafe_Reflection__URLConnection_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_67b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="109" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_67a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_67b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3444,17 +3040,11 @@
   </testcase>
   <testcase testcase_index="179">
     <file path="CWE470_Unsafe_Reflection__URLConnection_68a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_68a::bad" />
       <comment_fix line="101" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_68a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_68b.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_68b::badSink" />
       <comment_flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_68a::bad" file="CWE470_Unsafe_Reflection__URLConnection_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_68b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="101" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_68a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_68b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3462,17 +3052,11 @@
   </testcase>
   <testcase testcase_index="180">
     <file path="CWE470_Unsafe_Reflection__URLConnection_71a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_71a::bad" />
       <comment_fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_71a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_71b.java">
-      <comment_flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_71b::badSink" />
       <comment_flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_71a::bad" file="CWE470_Unsafe_Reflection__URLConnection_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_71b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_71a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_71b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3480,17 +3064,11 @@
   </testcase>
   <testcase testcase_index="181">
     <file path="CWE470_Unsafe_Reflection__URLConnection_72a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_72a::bad" />
       <comment_fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_72a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_72b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_72b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_72a::bad" file="CWE470_Unsafe_Reflection__URLConnection_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_72b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_72a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_72b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3498,17 +3076,11 @@
   </testcase>
   <testcase testcase_index="182">
     <file path="CWE470_Unsafe_Reflection__URLConnection_73a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_73a::bad" />
       <comment_fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_73a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_73b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_73b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_73a::bad" file="CWE470_Unsafe_Reflection__URLConnection_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_73b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_73a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_73b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3516,17 +3088,11 @@
   </testcase>
   <testcase testcase_index="183">
     <file path="CWE470_Unsafe_Reflection__URLConnection_74a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_74a::bad" />
       <comment_fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_74a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_74b.java">
-      <comment_flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_74b::badSink" />
       <comment_flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_74a::bad" file="CWE470_Unsafe_Reflection__URLConnection_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_74b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_74a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_74b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3534,37 +3100,23 @@
   </testcase>
   <testcase testcase_index="184">
     <file path="CWE470_Unsafe_Reflection__URLConnection_75a.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_75a::bad" />
       <comment_fix line="147" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_75a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_75b.java">
-      <comment_flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_75b::badSink" />
       <comment_flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_75a::bad" file="CWE470_Unsafe_Reflection__URLConnection_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_75b::badSink" file="CWE470_Unsafe_Reflection__URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="147" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_75a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_75b::goodG2BSink" file="CWE470_Unsafe_Reflection__URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="185">
-    <file path="CWE470_Unsafe_Reflection__URLConnection_81_bad.java">
-      <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_81_bad::action" />
-    </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_81_goodG2B.java">
       <comment_flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_81_goodG2B::action" />
     </file>
     <file path="CWE470_Unsafe_Reflection__URLConnection_81a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_81a::bad" />
       <comment_fix line="103" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE470_Unsafe_Reflection__URLConnection_81a::bad" file="CWE470_Unsafe_Reflection__URLConnection_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_81_bad::action" file="CWE470_Unsafe_Reflection__URLConnection_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__URLConnection_81a::goodG2B" file="CWE470_Unsafe_Reflection__URLConnection_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="29" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__URLConnection_81_goodG2B::action" file="CWE470_Unsafe_Reflection__URLConnection_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -4950,17 +4502,11 @@
   </testcase>
   <testcase testcase_index="258">
     <file path="CWE470_Unsafe_Reflection__console_readLine_75a.java">
-      <comment_flaw line="86" code="/* serialize data to a byte array */" function="CWE470_Unsafe_Reflection__console_readLine_75a::bad" />
       <comment_fix line="142" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__console_readLine_75a::goodG2B" />
     </file>
     <file path="CWE470_Unsafe_Reflection__console_readLine_75b.java">
-      <comment_flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__console_readLine_75b::badSink" />
       <comment_flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__console_readLine_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="42" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__console_readLine_75b::badSink" file="CWE470_Unsafe_Reflection__console_readLine_75b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="86" code="/* serialize data to a byte array */" function="CWE470_Unsafe_Reflection__console_readLine_75a::bad" file="CWE470_Unsafe_Reflection__console_readLine_75a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="142" code="data = &quot;Testing.test&quot;;" function="CWE470_Unsafe_Reflection__console_readLine_75a::goodG2B" file="CWE470_Unsafe_Reflection__console_readLine_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="99" code="Class&lt;?&gt; tempClass = Class.forName(data);" function="CWE470_Unsafe_Reflection__console_readLine_75b::goodG2BSink" file="CWE470_Unsafe_Reflection__console_readLine_75b.java" origin="comment_flaw" role="sink" safety="bad" />

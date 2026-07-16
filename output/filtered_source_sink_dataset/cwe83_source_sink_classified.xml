@@ -2,15 +2,9 @@
 <container>
   <testcase testcase_index="1">
     <file path="CWE83_XSS_Attribute__Servlet_File_01.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_01::bad" />
-      <comment_flaw line="104" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_01::bad" />
       <comment_fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_01::goodG2B" />
       <comment_flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_01::bad" file="CWE83_XSS_Attribute__Servlet_File_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="104" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_01::bad" file="CWE83_XSS_Attribute__Servlet_File_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_01::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_01::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -18,17 +12,11 @@
   </testcase>
   <testcase testcase_index="2">
     <file path="CWE83_XSS_Attribute__Servlet_File_02.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_02::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_02::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_02::bad" file="CWE83_XSS_Attribute__Servlet_File_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_02::bad" file="CWE83_XSS_Attribute__Servlet_File_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_02::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -40,17 +28,11 @@
   </testcase>
   <testcase testcase_index="3">
     <file path="CWE83_XSS_Attribute__Servlet_File_03.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_03::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_03::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_03::bad" file="CWE83_XSS_Attribute__Servlet_File_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_03::bad" file="CWE83_XSS_Attribute__Servlet_File_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_03::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -62,17 +44,11 @@
   </testcase>
   <testcase testcase_index="4">
     <file path="CWE83_XSS_Attribute__Servlet_File_04.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_04::bad" />
-      <comment_flaw line="117" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_04::bad" />
       <comment_fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B1" />
       <comment_flaw line="143" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B1" />
       <comment_fix line="155" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B2" />
       <comment_flaw line="167" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_04::bad" file="CWE83_XSS_Attribute__Servlet_File_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="117" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_04::bad" file="CWE83_XSS_Attribute__Servlet_File_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="143" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_04::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -84,17 +60,11 @@
   </testcase>
   <testcase testcase_index="5">
     <file path="CWE83_XSS_Attribute__Servlet_File_05.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_05::bad" />
-      <comment_flaw line="117" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_05::bad" />
       <comment_fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B1" />
       <comment_flaw line="143" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B1" />
       <comment_fix line="155" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B2" />
       <comment_flaw line="167" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_05::bad" file="CWE83_XSS_Attribute__Servlet_File_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="117" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_05::bad" file="CWE83_XSS_Attribute__Servlet_File_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="143" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_05::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -106,17 +76,11 @@
   </testcase>
   <testcase testcase_index="6">
     <file path="CWE83_XSS_Attribute__Servlet_File_06.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_06::bad" />
-      <comment_flaw line="116" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_06::bad" />
       <comment_fix line="135" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B1" />
       <comment_flaw line="142" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B1" />
       <comment_fix line="154" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B2" />
       <comment_flaw line="166" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_06::bad" file="CWE83_XSS_Attribute__Servlet_File_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="116" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_06::bad" file="CWE83_XSS_Attribute__Servlet_File_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="135" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="142" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_06::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -128,17 +92,11 @@
   </testcase>
   <testcase testcase_index="7">
     <file path="CWE83_XSS_Attribute__Servlet_File_07.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_07::bad" />
-      <comment_flaw line="116" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_07::bad" />
       <comment_fix line="135" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B1" />
       <comment_flaw line="142" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B1" />
       <comment_fix line="154" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B2" />
       <comment_flaw line="166" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_07::bad" file="CWE83_XSS_Attribute__Servlet_File_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="116" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_07::bad" file="CWE83_XSS_Attribute__Servlet_File_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="135" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="142" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_07::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -150,17 +108,11 @@
   </testcase>
   <testcase testcase_index="8">
     <file path="CWE83_XSS_Attribute__Servlet_File_08.java">
-      <comment_flaw line="65" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_08::bad" />
-      <comment_flaw line="124" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_08::bad" />
       <comment_fix line="143" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B1" />
       <comment_flaw line="150" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B1" />
       <comment_fix line="162" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B2" />
       <comment_flaw line="174" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="65" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_08::bad" file="CWE83_XSS_Attribute__Servlet_File_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_08::bad" file="CWE83_XSS_Attribute__Servlet_File_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="143" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="150" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_08::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -172,17 +124,11 @@
   </testcase>
   <testcase testcase_index="9">
     <file path="CWE83_XSS_Attribute__Servlet_File_09.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_09::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_09::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_09::bad" file="CWE83_XSS_Attribute__Servlet_File_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_09::bad" file="CWE83_XSS_Attribute__Servlet_File_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_09::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -194,17 +140,11 @@
   </testcase>
   <testcase testcase_index="10">
     <file path="CWE83_XSS_Attribute__Servlet_File_10.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_10::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_10::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_10::bad" file="CWE83_XSS_Attribute__Servlet_File_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_10::bad" file="CWE83_XSS_Attribute__Servlet_File_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_10::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -216,17 +156,11 @@
   </testcase>
   <testcase testcase_index="11">
     <file path="CWE83_XSS_Attribute__Servlet_File_11.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_11::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_11::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_11::bad" file="CWE83_XSS_Attribute__Servlet_File_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_11::bad" file="CWE83_XSS_Attribute__Servlet_File_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_11::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -238,15 +172,9 @@
   </testcase>
   <testcase testcase_index="12">
     <file path="CWE83_XSS_Attribute__Servlet_File_12.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_12::bad" />
-      <comment_flaw line="111" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_12::bad" />
       <comment_fix line="124" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_12::goodG2B" />
       <comment_flaw line="137" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_12::bad" file="CWE83_XSS_Attribute__Servlet_File_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="111" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_12::bad" file="CWE83_XSS_Attribute__Servlet_File_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="124" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_12::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="137" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_12::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -254,17 +182,11 @@
   </testcase>
   <testcase testcase_index="13">
     <file path="CWE83_XSS_Attribute__Servlet_File_13.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_13::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_13::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_13::bad" file="CWE83_XSS_Attribute__Servlet_File_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_13::bad" file="CWE83_XSS_Attribute__Servlet_File_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_13::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -276,17 +198,11 @@
   </testcase>
   <testcase testcase_index="14">
     <file path="CWE83_XSS_Attribute__Servlet_File_14.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_14::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_14::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_14::bad" file="CWE83_XSS_Attribute__Servlet_File_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_14::bad" file="CWE83_XSS_Attribute__Servlet_File_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_14::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -298,17 +214,11 @@
   </testcase>
   <testcase testcase_index="15">
     <file path="CWE83_XSS_Attribute__Servlet_File_15.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_15::bad" />
-      <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_15::bad" />
       <comment_fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B1" />
       <comment_flaw line="138" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B1" />
       <comment_fix line="152" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B2" />
       <comment_flaw line="164" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_15::bad" file="CWE83_XSS_Attribute__Servlet_File_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_15::bad" file="CWE83_XSS_Attribute__Servlet_File_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="138" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_15::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -320,15 +230,9 @@
   </testcase>
   <testcase testcase_index="16">
     <file path="CWE83_XSS_Attribute__Servlet_File_16.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_16::bad" />
-      <comment_flaw line="106" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_16::bad" />
       <comment_fix line="119" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_16::goodG2B" />
       <comment_flaw line="126" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_16::bad" file="CWE83_XSS_Attribute__Servlet_File_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="106" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_16::bad" file="CWE83_XSS_Attribute__Servlet_File_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="119" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_16::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_16::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -336,15 +240,9 @@
   </testcase>
   <testcase testcase_index="17">
     <file path="CWE83_XSS_Attribute__Servlet_File_17.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_17::bad" />
-      <comment_flaw line="106" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_17::bad" />
       <comment_fix line="118" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_17::goodG2B" />
       <comment_flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_17::bad" file="CWE83_XSS_Attribute__Servlet_File_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="106" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_17::bad" file="CWE83_XSS_Attribute__Servlet_File_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="118" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_17::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_17::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -352,17 +250,11 @@
   </testcase>
   <testcase testcase_index="18">
     <file path="CWE83_XSS_Attribute__Servlet_File_21.java">
-      <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_21::bad" />
-      <comment_flaw line="70" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_21::bad_source" />
       <comment_flaw line="150" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B1" />
       <comment_fix line="169" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B1_source" />
       <comment_flaw line="187" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B2" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="70" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_21::bad_source" file="CWE83_XSS_Attribute__Servlet_File_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_21::bad" file="CWE83_XSS_Attribute__Servlet_File_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="169" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B1_source" file="CWE83_XSS_Attribute__Servlet_File_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="150" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_21::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -374,19 +266,13 @@
   </testcase>
   <testcase testcase_index="19">
     <file path="CWE83_XSS_Attribute__Servlet_File_22a.java">
-      <comment_flaw line="39" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_22a::bad" />
       <comment_flaw line="66" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_22a::goodG2B1" />
       <comment_flaw line="82" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_22a::goodG2B2" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_22b.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_22b::badSource" />
       <comment_fix line="125" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_22b::goodG2B1Source" />
       <comment_fix line="140" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_22b::badSource" file="CWE83_XSS_Attribute__Servlet_File_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="39" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_22a::bad" file="CWE83_XSS_Attribute__Servlet_File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="125" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_22b::goodG2B1Source" file="CWE83_XSS_Attribute__Servlet_File_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="66" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_22a::goodG2B1" file="CWE83_XSS_Attribute__Servlet_File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -398,15 +284,9 @@
   </testcase>
   <testcase testcase_index="20">
     <file path="CWE83_XSS_Attribute__Servlet_File_31.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_31::bad" />
-      <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_31::bad" />
       <comment_fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_31::goodG2B" />
       <comment_flaw line="141" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_31::bad" file="CWE83_XSS_Attribute__Servlet_File_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_31::bad" file="CWE83_XSS_Attribute__Servlet_File_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_31::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="141" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_31::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -414,15 +294,9 @@
   </testcase>
   <testcase testcase_index="21">
     <file path="CWE83_XSS_Attribute__Servlet_File_41.java">
-      <comment_flaw line="38" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_41::badSink" />
-      <comment_flaw line="62" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_41::bad" />
       <comment_flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_41::goodG2BSink" />
       <comment_fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="62" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_41::bad" file="CWE83_XSS_Attribute__Servlet_File_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="38" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_41::badSink" file="CWE83_XSS_Attribute__Servlet_File_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="136" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_41::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="125" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_41::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -430,15 +304,9 @@
   </testcase>
   <testcase testcase_index="22">
     <file path="CWE83_XSS_Attribute__Servlet_File_42.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_42::badSource" />
-      <comment_flaw line="111" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_42::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_42::goodG2BSource" />
       <comment_flaw line="134" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_42::badSource" file="CWE83_XSS_Attribute__Servlet_File_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="111" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_42::bad" file="CWE83_XSS_Attribute__Servlet_File_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_42::goodG2BSource" file="CWE83_XSS_Attribute__Servlet_File_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="134" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_42::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -446,15 +314,9 @@
   </testcase>
   <testcase testcase_index="23">
     <file path="CWE83_XSS_Attribute__Servlet_File_45.java">
-      <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_45::badSink" />
-      <comment_flaw line="68" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_45::bad" />
       <comment_flaw line="133" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_45::goodG2BSink" />
       <comment_fix line="144" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="68" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_45::bad" file="CWE83_XSS_Attribute__Servlet_File_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_45::badSink" file="CWE83_XSS_Attribute__Servlet_File_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="144" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_45::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="133" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_45::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -462,17 +324,11 @@
   </testcase>
   <testcase testcase_index="24">
     <file path="CWE83_XSS_Attribute__Servlet_File_51a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_51a::bad" />
       <comment_fix line="114" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_51a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_51b.java">
-      <comment_flaw line="30" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_51b::badSink" />
       <comment_flaw line="42" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_51a::bad" file="CWE83_XSS_Attribute__Servlet_File_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_51b::badSink" file="CWE83_XSS_Attribute__Servlet_File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="114" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_51a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="42" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_51b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -480,17 +336,11 @@
   </testcase>
   <testcase testcase_index="25">
     <file path="CWE83_XSS_Attribute__Servlet_File_52a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_52a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_52a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_52c.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_52c::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_52a::bad" file="CWE83_XSS_Attribute__Servlet_File_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_52c::badSink" file="CWE83_XSS_Attribute__Servlet_File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_52a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_52c::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -498,17 +348,11 @@
   </testcase>
   <testcase testcase_index="26">
     <file path="CWE83_XSS_Attribute__Servlet_File_53a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_53a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_53a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_53d.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_53d::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_53a::bad" file="CWE83_XSS_Attribute__Servlet_File_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_53d::badSink" file="CWE83_XSS_Attribute__Servlet_File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_53a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_53d::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -516,17 +360,11 @@
   </testcase>
   <testcase testcase_index="27">
     <file path="CWE83_XSS_Attribute__Servlet_File_54a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_54a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_54a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_54e.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_54e::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_54a::bad" file="CWE83_XSS_Attribute__Servlet_File_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_54e::badSink" file="CWE83_XSS_Attribute__Servlet_File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_54a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_54e::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -534,17 +372,11 @@
   </testcase>
   <testcase testcase_index="28">
     <file path="CWE83_XSS_Attribute__Servlet_File_61a.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_61a::bad" />
       <comment_flaw line="50" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_61a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_61b.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_61b::badSource" />
       <comment_fix line="110" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_61b::badSource" file="CWE83_XSS_Attribute__Servlet_File_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_61a::bad" file="CWE83_XSS_Attribute__Servlet_File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="110" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_61b::goodG2BSource" file="CWE83_XSS_Attribute__Servlet_File_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="50" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_61a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -552,17 +384,11 @@
   </testcase>
   <testcase testcase_index="29">
     <file path="CWE83_XSS_Attribute__Servlet_File_66a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_66a::bad" />
       <comment_fix line="117" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_66a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_66b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_66b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_66a::bad" file="CWE83_XSS_Attribute__Servlet_File_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_66b::badSink" file="CWE83_XSS_Attribute__Servlet_File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="117" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_66a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_66b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -570,17 +396,11 @@
   </testcase>
   <testcase testcase_index="30">
     <file path="CWE83_XSS_Attribute__Servlet_File_67a.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_67a::bad" />
       <comment_fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_67a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_67b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_67b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_67a::bad" file="CWE83_XSS_Attribute__Servlet_File_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_67b::badSink" file="CWE83_XSS_Attribute__Servlet_File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_67a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_67b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -588,17 +408,11 @@
   </testcase>
   <testcase testcase_index="31">
     <file path="CWE83_XSS_Attribute__Servlet_File_68a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_68a::bad" />
       <comment_fix line="114" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_68a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_68b.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_68b::badSink" />
       <comment_flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_68a::bad" file="CWE83_XSS_Attribute__Servlet_File_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_68b::badSink" file="CWE83_XSS_Attribute__Servlet_File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="114" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_68a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_68b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -606,17 +420,11 @@
   </testcase>
   <testcase testcase_index="32">
     <file path="CWE83_XSS_Attribute__Servlet_File_71a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_71a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_71a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_71b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_71b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_71a::bad" file="CWE83_XSS_Attribute__Servlet_File_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_71b::badSink" file="CWE83_XSS_Attribute__Servlet_File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_71a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_71b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -624,17 +432,11 @@
   </testcase>
   <testcase testcase_index="33">
     <file path="CWE83_XSS_Attribute__Servlet_File_72a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_72a::bad" />
       <comment_fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_72a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_72b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_72b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_72a::bad" file="CWE83_XSS_Attribute__Servlet_File_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_72b::badSink" file="CWE83_XSS_Attribute__Servlet_File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_72a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_72b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -642,17 +444,11 @@
   </testcase>
   <testcase testcase_index="34">
     <file path="CWE83_XSS_Attribute__Servlet_File_73a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_73a::bad" />
       <comment_fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_73a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_73b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_73b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_73a::bad" file="CWE83_XSS_Attribute__Servlet_File_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_73b::badSink" file="CWE83_XSS_Attribute__Servlet_File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_73a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_73b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -660,17 +456,11 @@
   </testcase>
   <testcase testcase_index="35">
     <file path="CWE83_XSS_Attribute__Servlet_File_74a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_74a::bad" />
       <comment_fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_74a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_74b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_74b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_74a::bad" file="CWE83_XSS_Attribute__Servlet_File_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_74b::badSink" file="CWE83_XSS_Attribute__Servlet_File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="120" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_74a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_74b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -678,37 +468,23 @@
   </testcase>
   <testcase testcase_index="36">
     <file path="CWE83_XSS_Attribute__Servlet_File_75a.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_75a::bad" />
       <comment_fix line="160" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_75a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_75b.java">
-      <comment_flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_75b::badSink" />
       <comment_flaw line="101" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_75a::bad" file="CWE83_XSS_Attribute__Servlet_File_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_75b::badSink" file="CWE83_XSS_Attribute__Servlet_File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="160" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_75a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="101" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_75b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="37">
-    <file path="CWE83_XSS_Attribute__Servlet_File_81_bad.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_81_bad::action" />
-    </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_81_goodG2B.java">
       <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_81_goodG2B::action" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_File_81a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_81a::bad" />
       <comment_fix line="116" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE83_XSS_Attribute__Servlet_File_81a::bad" file="CWE83_XSS_Attribute__Servlet_File_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_81_bad::action" file="CWE83_XSS_Attribute__Servlet_File_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_File_81a::goodG2B" file="CWE83_XSS_Attribute__Servlet_File_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_File_81_goodG2B::action" file="CWE83_XSS_Attribute__Servlet_File_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1430,15 +1206,9 @@
   </testcase>
   <testcase testcase_index="75">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_01.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_01::bad" />
-      <comment_flaw line="91" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::bad" />
       <comment_fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::goodG2B" />
       <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_01::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="91" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_01::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1446,17 +1216,11 @@
   </testcase>
   <testcase testcase_index="76">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_02.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_02::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_02::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_02::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1468,17 +1232,11 @@
   </testcase>
   <testcase testcase_index="77">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_03.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_03::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_03::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_03::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1490,17 +1248,11 @@
   </testcase>
   <testcase testcase_index="78">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_04.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_04::bad" />
-      <comment_flaw line="103" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::bad" />
       <comment_fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B1" />
       <comment_flaw line="129" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B1" />
       <comment_fix line="141" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B2" />
       <comment_flaw line="153" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_04::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="103" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_04::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1512,17 +1264,11 @@
   </testcase>
   <testcase testcase_index="79">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_05.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_05::bad" />
-      <comment_flaw line="103" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::bad" />
       <comment_fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B1" />
       <comment_flaw line="129" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B1" />
       <comment_fix line="141" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B2" />
       <comment_flaw line="153" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_05::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="103" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="122" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_05::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1534,17 +1280,11 @@
   </testcase>
   <testcase testcase_index="80">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_06.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_06::bad" />
-      <comment_flaw line="102" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B1" />
       <comment_flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B1" />
       <comment_fix line="140" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B2" />
       <comment_flaw line="152" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_06::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="102" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_06::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1556,17 +1296,11 @@
   </testcase>
   <testcase testcase_index="81">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_07.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_07::bad" />
-      <comment_flaw line="102" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B1" />
       <comment_flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B1" />
       <comment_fix line="140" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B2" />
       <comment_flaw line="152" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_07::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="102" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_07::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1578,17 +1312,11 @@
   </testcase>
   <testcase testcase_index="82">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_08.java">
-      <comment_flaw line="63" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_08::bad" />
-      <comment_flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::bad" />
       <comment_fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B1" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B1" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B2" />
       <comment_flaw line="160" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="63" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_08::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="129" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_08::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1600,17 +1328,11 @@
   </testcase>
   <testcase testcase_index="83">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_09.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_09::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_09::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_09::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1622,17 +1344,11 @@
   </testcase>
   <testcase testcase_index="84">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_10.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_10::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_10::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_10::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1644,17 +1360,11 @@
   </testcase>
   <testcase testcase_index="85">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_11.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_11::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_11::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_11::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1666,15 +1376,9 @@
   </testcase>
   <testcase testcase_index="86">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_12.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_12::bad" />
-      <comment_flaw line="97" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::bad" />
       <comment_fix line="110" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::goodG2B" />
       <comment_flaw line="123" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_12::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="97" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="110" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="123" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_12::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1682,17 +1386,11 @@
   </testcase>
   <testcase testcase_index="87">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_13.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_13::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_13::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_13::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1704,17 +1402,11 @@
   </testcase>
   <testcase testcase_index="88">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_14.java">
-      <comment_flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_14::bad" />
-      <comment_flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B1" />
       <comment_flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B1" />
       <comment_fix line="134" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B2" />
       <comment_flaw line="146" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="49" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_14::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="96" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="122" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_14::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1726,17 +1418,11 @@
   </testcase>
   <testcase testcase_index="89">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_15.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_15::bad" />
-      <comment_flaw line="98" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::bad" />
       <comment_fix line="117" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B1" />
       <comment_flaw line="124" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B1" />
       <comment_fix line="138" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B2" />
       <comment_flaw line="150" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_15::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="98" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="117" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="124" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_15::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1748,15 +1434,9 @@
   </testcase>
   <testcase testcase_index="90">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_16.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_16::bad" />
-      <comment_flaw line="92" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::bad" />
       <comment_fix line="105" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::goodG2B" />
       <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_16::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="92" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="105" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_16::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1764,15 +1444,9 @@
   </testcase>
   <testcase testcase_index="91">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_17.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_17::bad" />
-      <comment_flaw line="93" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::bad" />
       <comment_fix line="105" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::goodG2B" />
       <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_17::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="93" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="105" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_17::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1780,17 +1454,11 @@
   </testcase>
   <testcase testcase_index="92">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_21.java">
-      <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::bad" />
-      <comment_flaw line="68" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_21::bad_source" />
       <comment_flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B1" />
       <comment_fix line="155" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B1_source" />
       <comment_flaw line="173" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B2" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="68" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_21::bad_source" file="CWE83_XSS_Attribute__Servlet_URLConnection_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="155" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B1_source" file="CWE83_XSS_Attribute__Servlet_URLConnection_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="136" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_21::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1802,19 +1470,13 @@
   </testcase>
   <testcase testcase_index="93">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_22a.java">
-      <comment_flaw line="39" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_22a::bad" />
       <comment_flaw line="66" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_22a::goodG2B1" />
       <comment_flaw line="82" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_22a::goodG2B2" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_22b.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_22b::badSource" />
       <comment_fix line="111" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_22b::goodG2B1Source" />
       <comment_fix line="126" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_22b::badSource" file="CWE83_XSS_Attribute__Servlet_URLConnection_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="39" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_22a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="111" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_22b::goodG2B1Source" file="CWE83_XSS_Attribute__Servlet_URLConnection_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="66" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_22a::goodG2B1" file="CWE83_XSS_Attribute__Servlet_URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1826,15 +1488,9 @@
   </testcase>
   <testcase testcase_index="94">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_31.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_31::bad" />
-      <comment_flaw line="99" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::bad" />
       <comment_fix line="118" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::goodG2B" />
       <comment_flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_31::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="99" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="118" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_31::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1842,15 +1498,9 @@
   </testcase>
   <testcase testcase_index="95">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_41.java">
-      <comment_flaw line="38" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::badSink" />
-      <comment_flaw line="61" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_41::bad" />
       <comment_flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::goodG2BSink" />
       <comment_fix line="123" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="61" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_41::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="38" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="123" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="112" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_41::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1858,15 +1508,9 @@
   </testcase>
   <testcase testcase_index="96">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_42.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_42::badSource" />
-      <comment_flaw line="98" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::bad" />
       <comment_fix line="108" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::goodG2BSource" />
       <comment_flaw line="121" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_42::badSource" file="CWE83_XSS_Attribute__Servlet_URLConnection_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="98" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="108" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::goodG2BSource" file="CWE83_XSS_Attribute__Servlet_URLConnection_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="121" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_42::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1874,15 +1518,9 @@
   </testcase>
   <testcase testcase_index="97">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_45.java">
-      <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::badSink" />
-      <comment_flaw line="67" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_45::bad" />
       <comment_flaw line="120" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::goodG2BSink" />
       <comment_fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="67" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_45::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="131" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="120" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_45::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1890,17 +1528,11 @@
   </testcase>
   <testcase testcase_index="98">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_51a.java">
-      <comment_flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_51a::bad" />
       <comment_fix line="101" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_51a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_51b.java">
-      <comment_flaw line="30" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_51b::badSink" />
       <comment_flaw line="42" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="50" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_51a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="30" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_51b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="101" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_51a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="42" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_51b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1908,17 +1540,11 @@
   </testcase>
   <testcase testcase_index="99">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_52a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_52a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_52a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_52c.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_52c::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_52a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_52c::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_52a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_52c::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1926,17 +1552,11 @@
   </testcase>
   <testcase testcase_index="100">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_53a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_53a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_53a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_53d.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_53d::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_53a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_53d::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_53a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_53d::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1944,17 +1564,11 @@
   </testcase>
   <testcase testcase_index="101">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_54a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_54a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_54a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_54e.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_54e::badSink" />
       <comment_flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_54a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_54e::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_54a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="43" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_54e::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1962,17 +1576,11 @@
   </testcase>
   <testcase testcase_index="102">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_61a.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_61a::bad" />
       <comment_flaw line="50" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_61a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_61b.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_61b::badSource" />
       <comment_fix line="97" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_61b::badSource" file="CWE83_XSS_Attribute__Servlet_URLConnection_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_61a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="97" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_61b::goodG2BSource" file="CWE83_XSS_Attribute__Servlet_URLConnection_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="50" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_61a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1980,17 +1588,11 @@
   </testcase>
   <testcase testcase_index="103">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_66a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_66a::bad" />
       <comment_fix line="104" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_66a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_66b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_66b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_66a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_66b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="104" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_66a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_66b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1998,17 +1600,11 @@
   </testcase>
   <testcase testcase_index="104">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_67a.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_67a::bad" />
       <comment_fix line="109" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_67a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_67b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_67b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_67a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_67b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="109" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_67a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_67b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2016,17 +1612,11 @@
   </testcase>
   <testcase testcase_index="105">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_68a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_68a::bad" />
       <comment_fix line="101" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_68a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_68b.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_68b::badSink" />
       <comment_flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_68a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_68b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="101" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_68a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_68b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2034,17 +1624,11 @@
   </testcase>
   <testcase testcase_index="106">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_71a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_71a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_71a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_71b.java">
-      <comment_flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_71b::badSink" />
       <comment_flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_71a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="32" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_71b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_71a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="45" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_71b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2052,17 +1636,11 @@
   </testcase>
   <testcase testcase_index="107">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_72a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_72a::bad" />
       <comment_fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_72a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_72b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_72b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_72a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_72b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_72a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_72b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2070,17 +1648,11 @@
   </testcase>
   <testcase testcase_index="108">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_73a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_73a::bad" />
       <comment_fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_73a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_73b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_73b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_73a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_73b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_73a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_73b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2088,17 +1660,11 @@
   </testcase>
   <testcase testcase_index="109">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_74a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_74a::bad" />
       <comment_fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_74a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_74b.java">
-      <comment_flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_74b::badSink" />
       <comment_flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_74a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="33" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_74b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="107" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_74a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_74b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2106,37 +1672,23 @@
   </testcase>
   <testcase testcase_index="110">
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_75a.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_75a::bad" />
       <comment_fix line="147" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_75a::goodG2B" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_75b.java">
-      <comment_flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_75b::badSink" />
       <comment_flaw line="101" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_75a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="44" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_75b::badSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="147" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_75a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="101" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_75b::goodG2BSink" file="CWE83_XSS_Attribute__Servlet_URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="111">
-    <file path="CWE83_XSS_Attribute__Servlet_URLConnection_81_bad.java">
-      <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_81_bad::action" />
-    </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_81_goodG2B.java">
       <comment_flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_81_goodG2B::action" />
     </file>
     <file path="CWE83_XSS_Attribute__Servlet_URLConnection_81a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_81a::bad" />
       <comment_fix line="103" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE83_XSS_Attribute__Servlet_URLConnection_81a::bad" file="CWE83_XSS_Attribute__Servlet_URLConnection_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_81_bad::action" file="CWE83_XSS_Attribute__Servlet_URLConnection_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;foo&quot;;" function="CWE83_XSS_Attribute__Servlet_URLConnection_81a::goodG2B" file="CWE83_XSS_Attribute__Servlet_URLConnection_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="31" code="response.getWriter().println(&quot;&lt;br&gt;bad() - &lt;img src=\&quot;&quot; + data + &quot;\&quot;&gt;&quot;);" function="CWE83_XSS_Attribute__Servlet_URLConnection_81_goodG2B::action" file="CWE83_XSS_Attribute__Servlet_URLConnection_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />

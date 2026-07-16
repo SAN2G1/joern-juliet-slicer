@@ -2,21 +2,9 @@
 <container>
   <testcase testcase_index="1">
     <file path="CWE256_Plaintext_Storage_of_Password__basic_01.java">
-      <comment_flaw line="78" code="/* POTENTIAL FLAW: Use password as a password to connect to a DB  (without being decrypted) */" function="CWE256_Plaintext_Storage_of_Password__basic_01::bad" />
-      <comment_flaw line="80" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_01::bad" />
       <comment_fix line="151" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodG2B" />
       <comment_flaw line="164" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodG2B" />
-      <comment_flaw line="229" code="/* FIX: password is decrypted before being used as a database password */" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodB2G" />
-      <comment_fix line="230" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodB2G" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="78" code="/* POTENTIAL FLAW: Use password as a password to connect to a DB  (without being decrypted) */" function="CWE256_Plaintext_Storage_of_Password__basic_01::bad" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="80" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_01::bad" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
-    <flow type="b2g" flow_index="2" classification_method="same_function_line_order">
-      <flaw line="229" code="/* FIX: password is decrypted before being used as a database password */" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodB2G" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <fix line="230" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodB2G" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_fix" role="sink" safety="good" />
-    </flow>
     <flow type="g2b" flow_index="3" classification_method="same_function_line_order">
       <fix line="151" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodG2B" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="164" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_01::goodG2B" file="CWE256_Plaintext_Storage_of_Password__basic_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -738,23 +726,11 @@
   </testcase>
   <testcase testcase_index="36">
     <file path="CWE256_Plaintext_Storage_of_Password__basic_75a.java">
-      <comment_flaw line="77" code="/* serialize password to a byte array */" function="CWE256_Plaintext_Storage_of_Password__basic_75a::bad" />
       <comment_fix line="167" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_75a::goodG2B" />
-      <comment_flaw line="262" code="/* serialize password to a byte array */" function="CWE256_Plaintext_Storage_of_Password__basic_75a::goodB2G" />
     </file>
     <file path="CWE256_Plaintext_Storage_of_Password__basic_75b.java">
-      <comment_flaw line="52" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_75b::badSink" />
       <comment_flaw line="128" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_75b::goodG2BSink" />
-      <comment_fix line="204" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_75b::goodB2GSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="77" code="/* serialize password to a byte array */" function="CWE256_Plaintext_Storage_of_Password__basic_75a::bad" file="CWE256_Plaintext_Storage_of_Password__basic_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="52" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_75b::badSink" file="CWE256_Plaintext_Storage_of_Password__basic_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
-    <flow type="b2g" flow_index="2" classification_method="function_name_rule">
-      <flaw line="262" code="/* serialize password to a byte array */" function="CWE256_Plaintext_Storage_of_Password__basic_75a::goodB2G" file="CWE256_Plaintext_Storage_of_Password__basic_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <fix line="204" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_75b::goodB2GSink" file="CWE256_Plaintext_Storage_of_Password__basic_75b.java" origin="comment_fix" role="sink" safety="good" />
-    </flow>
     <flow type="g2b" flow_index="3" classification_method="function_name_rule">
       <fix line="167" code="{" function="CWE256_Plaintext_Storage_of_Password__basic_75a::goodG2B" file="CWE256_Plaintext_Storage_of_Password__basic_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="Connection dBConnection = null;" function="CWE256_Plaintext_Storage_of_Password__basic_75b::goodG2BSink" file="CWE256_Plaintext_Storage_of_Password__basic_75b.java" origin="comment_flaw" role="sink" safety="bad" />

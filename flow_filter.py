@@ -81,6 +81,15 @@ def line_is_positive_int(value: str | None) -> bool:
     return int(value) > 0
 
 
+def code_is_invalid(code: str | None) -> bool:
+    code_text = (code or "").strip()
+    return (
+        not code_text
+        or code_text == WARNING_CODE
+        or code_text.startswith("/*")
+    )
+
+
 def collect_node_issues(
     node: ET.Element,
     expected: dict[str, str],
@@ -91,8 +100,8 @@ def collect_node_issues(
     code = node.get("code")
     issues: set[str] = set()
 
-    if not code or code == WARNING_CODE:
-        issues.add("warning_or_empty_code")
+    if code_is_invalid(code):
+        issues.add("invalid_code")
     if role not in VALID_ROLES:
         issues.add("bad_role")
     if safety not in VALID_SAFETIES:

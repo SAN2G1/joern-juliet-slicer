@@ -716,15 +716,9 @@
   </testcase>
   <testcase testcase_index="38">
     <file path="CWE23_Relative_Path_Traversal__File_01.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_01::bad" />
-      <comment_flaw line="118" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_01::bad" />
       <comment_fix line="190" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_01::goodG2B" />
       <comment_flaw line="207" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_01::bad" file="CWE23_Relative_Path_Traversal__File_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="118" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_01::bad" file="CWE23_Relative_Path_Traversal__File_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="190" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_01::goodG2B" file="CWE23_Relative_Path_Traversal__File_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="207" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_01::goodG2B" file="CWE23_Relative_Path_Traversal__File_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -732,17 +726,11 @@
   </testcase>
   <testcase testcase_index="39">
     <file path="CWE23_Relative_Path_Traversal__File_02.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_02::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_02::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_02::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_02::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_02::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_02::bad" file="CWE23_Relative_Path_Traversal__File_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_02::bad" file="CWE23_Relative_Path_Traversal__File_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_02::goodG2B1" file="CWE23_Relative_Path_Traversal__File_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_02::goodG2B1" file="CWE23_Relative_Path_Traversal__File_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -754,17 +742,11 @@
   </testcase>
   <testcase testcase_index="40">
     <file path="CWE23_Relative_Path_Traversal__File_03.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_03::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_03::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_03::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_03::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_03::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_03::bad" file="CWE23_Relative_Path_Traversal__File_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_03::bad" file="CWE23_Relative_Path_Traversal__File_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_03::goodG2B1" file="CWE23_Relative_Path_Traversal__File_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_03::goodG2B1" file="CWE23_Relative_Path_Traversal__File_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -776,17 +758,11 @@
   </testcase>
   <testcase testcase_index="41">
     <file path="CWE23_Relative_Path_Traversal__File_04.java">
-      <comment_flaw line="60" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_04::bad" />
-      <comment_flaw line="131" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_04::bad" />
       <comment_fix line="206" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_04::goodG2B1" />
       <comment_flaw line="225" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_04::goodG2B1" />
       <comment_fix line="293" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_04::goodG2B2" />
       <comment_flaw line="317" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="60" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_04::bad" file="CWE23_Relative_Path_Traversal__File_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="131" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_04::bad" file="CWE23_Relative_Path_Traversal__File_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="206" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_04::goodG2B1" file="CWE23_Relative_Path_Traversal__File_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="225" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_04::goodG2B1" file="CWE23_Relative_Path_Traversal__File_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -798,17 +774,11 @@
   </testcase>
   <testcase testcase_index="42">
     <file path="CWE23_Relative_Path_Traversal__File_05.java">
-      <comment_flaw line="60" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_05::bad" />
-      <comment_flaw line="131" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_05::bad" />
       <comment_fix line="206" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_05::goodG2B1" />
       <comment_flaw line="225" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_05::goodG2B1" />
       <comment_fix line="293" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_05::goodG2B2" />
       <comment_flaw line="317" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="60" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_05::bad" file="CWE23_Relative_Path_Traversal__File_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="131" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_05::bad" file="CWE23_Relative_Path_Traversal__File_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="206" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_05::goodG2B1" file="CWE23_Relative_Path_Traversal__File_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="225" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_05::goodG2B1" file="CWE23_Relative_Path_Traversal__File_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -820,17 +790,11 @@
   </testcase>
   <testcase testcase_index="43">
     <file path="CWE23_Relative_Path_Traversal__File_06.java">
-      <comment_flaw line="59" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_06::bad" />
-      <comment_flaw line="130" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_06::bad" />
       <comment_fix line="205" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_06::goodG2B1" />
       <comment_flaw line="224" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_06::goodG2B1" />
       <comment_fix line="292" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_06::goodG2B2" />
       <comment_flaw line="316" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="59" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_06::bad" file="CWE23_Relative_Path_Traversal__File_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="130" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_06::bad" file="CWE23_Relative_Path_Traversal__File_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="205" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_06::goodG2B1" file="CWE23_Relative_Path_Traversal__File_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="224" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_06::goodG2B1" file="CWE23_Relative_Path_Traversal__File_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -842,17 +806,11 @@
   </testcase>
   <testcase testcase_index="44">
     <file path="CWE23_Relative_Path_Traversal__File_07.java">
-      <comment_flaw line="59" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_07::bad" />
-      <comment_flaw line="130" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_07::bad" />
       <comment_fix line="205" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_07::goodG2B1" />
       <comment_flaw line="224" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_07::goodG2B1" />
       <comment_fix line="292" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_07::goodG2B2" />
       <comment_flaw line="316" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="59" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_07::bad" file="CWE23_Relative_Path_Traversal__File_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="130" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_07::bad" file="CWE23_Relative_Path_Traversal__File_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="205" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_07::goodG2B1" file="CWE23_Relative_Path_Traversal__File_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="224" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_07::goodG2B1" file="CWE23_Relative_Path_Traversal__File_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -864,17 +822,11 @@
   </testcase>
   <testcase testcase_index="45">
     <file path="CWE23_Relative_Path_Traversal__File_08.java">
-      <comment_flaw line="67" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_08::bad" />
-      <comment_flaw line="138" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_08::bad" />
       <comment_fix line="213" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_08::goodG2B1" />
       <comment_flaw line="232" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_08::goodG2B1" />
       <comment_fix line="300" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_08::goodG2B2" />
       <comment_flaw line="324" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="67" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_08::bad" file="CWE23_Relative_Path_Traversal__File_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="138" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_08::bad" file="CWE23_Relative_Path_Traversal__File_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="213" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_08::goodG2B1" file="CWE23_Relative_Path_Traversal__File_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="232" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_08::goodG2B1" file="CWE23_Relative_Path_Traversal__File_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -886,17 +838,11 @@
   </testcase>
   <testcase testcase_index="46">
     <file path="CWE23_Relative_Path_Traversal__File_09.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_09::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_09::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_09::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_09::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_09::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_09::bad" file="CWE23_Relative_Path_Traversal__File_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_09::bad" file="CWE23_Relative_Path_Traversal__File_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_09::goodG2B1" file="CWE23_Relative_Path_Traversal__File_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_09::goodG2B1" file="CWE23_Relative_Path_Traversal__File_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -908,17 +854,11 @@
   </testcase>
   <testcase testcase_index="47">
     <file path="CWE23_Relative_Path_Traversal__File_10.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_10::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_10::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_10::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_10::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_10::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_10::bad" file="CWE23_Relative_Path_Traversal__File_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_10::bad" file="CWE23_Relative_Path_Traversal__File_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_10::goodG2B1" file="CWE23_Relative_Path_Traversal__File_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_10::goodG2B1" file="CWE23_Relative_Path_Traversal__File_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -930,17 +870,11 @@
   </testcase>
   <testcase testcase_index="48">
     <file path="CWE23_Relative_Path_Traversal__File_11.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_11::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_11::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_11::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_11::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_11::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_11::bad" file="CWE23_Relative_Path_Traversal__File_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_11::bad" file="CWE23_Relative_Path_Traversal__File_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_11::goodG2B1" file="CWE23_Relative_Path_Traversal__File_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_11::goodG2B1" file="CWE23_Relative_Path_Traversal__File_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -952,15 +886,9 @@
   </testcase>
   <testcase testcase_index="49">
     <file path="CWE23_Relative_Path_Traversal__File_12.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_12::bad" />
-      <comment_flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_12::bad" />
       <comment_fix line="194" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_12::goodG2B" />
       <comment_flaw line="219" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_12::bad" file="CWE23_Relative_Path_Traversal__File_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_12::bad" file="CWE23_Relative_Path_Traversal__File_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="194" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_12::goodG2B" file="CWE23_Relative_Path_Traversal__File_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="219" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_12::goodG2B" file="CWE23_Relative_Path_Traversal__File_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -968,17 +896,11 @@
   </testcase>
   <testcase testcase_index="50">
     <file path="CWE23_Relative_Path_Traversal__File_13.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_13::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_13::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_13::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_13::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_13::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_13::bad" file="CWE23_Relative_Path_Traversal__File_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_13::bad" file="CWE23_Relative_Path_Traversal__File_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_13::goodG2B1" file="CWE23_Relative_Path_Traversal__File_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_13::goodG2B1" file="CWE23_Relative_Path_Traversal__File_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -990,17 +912,11 @@
   </testcase>
   <testcase testcase_index="51">
     <file path="CWE23_Relative_Path_Traversal__File_14.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_14::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_14::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_14::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_14::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_14::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_14::bad" file="CWE23_Relative_Path_Traversal__File_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_14::bad" file="CWE23_Relative_Path_Traversal__File_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_14::goodG2B1" file="CWE23_Relative_Path_Traversal__File_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_14::goodG2B1" file="CWE23_Relative_Path_Traversal__File_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1012,17 +928,11 @@
   </testcase>
   <testcase testcase_index="52">
     <file path="CWE23_Relative_Path_Traversal__File_15.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_15::bad" />
-      <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_15::bad" />
       <comment_fix line="201" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_15::goodG2B1" />
       <comment_flaw line="220" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_15::goodG2B1" />
       <comment_fix line="290" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_15::goodG2B2" />
       <comment_flaw line="314" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_15::bad" file="CWE23_Relative_Path_Traversal__File_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_15::bad" file="CWE23_Relative_Path_Traversal__File_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="201" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_15::goodG2B1" file="CWE23_Relative_Path_Traversal__File_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="220" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_15::goodG2B1" file="CWE23_Relative_Path_Traversal__File_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1034,15 +944,9 @@
   </testcase>
   <testcase testcase_index="53">
     <file path="CWE23_Relative_Path_Traversal__File_16.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_16::bad" />
-      <comment_flaw line="120" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_16::bad" />
       <comment_fix line="189" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_16::goodG2B" />
       <comment_flaw line="208" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_16::bad" file="CWE23_Relative_Path_Traversal__File_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="120" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_16::bad" file="CWE23_Relative_Path_Traversal__File_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="189" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_16::goodG2B" file="CWE23_Relative_Path_Traversal__File_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="208" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_16::goodG2B" file="CWE23_Relative_Path_Traversal__File_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1050,15 +954,9 @@
   </testcase>
   <testcase testcase_index="54">
     <file path="CWE23_Relative_Path_Traversal__File_17.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_17::bad" />
-      <comment_flaw line="119" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_17::bad" />
       <comment_fix line="187" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_17::goodG2B" />
       <comment_flaw line="205" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_17::bad" file="CWE23_Relative_Path_Traversal__File_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="119" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_17::bad" file="CWE23_Relative_Path_Traversal__File_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="187" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_17::goodG2B" file="CWE23_Relative_Path_Traversal__File_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="205" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_17::goodG2B" file="CWE23_Relative_Path_Traversal__File_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1066,17 +964,11 @@
   </testcase>
   <testcase testcase_index="55">
     <file path="CWE23_Relative_Path_Traversal__File_21.java">
-      <comment_flaw line="60" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_21::bad" />
-      <comment_flaw line="140" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_21::bad_source" />
       <comment_flaw line="232" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_21::goodG2B1" />
       <comment_fix line="307" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_21::goodG2B1_source" />
       <comment_flaw line="337" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_21::goodG2B2" />
       <comment_fix line="405" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="140" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_21::bad_source" file="CWE23_Relative_Path_Traversal__File_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="60" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_21::bad" file="CWE23_Relative_Path_Traversal__File_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="307" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_21::goodG2B1_source" file="CWE23_Relative_Path_Traversal__File_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="232" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_21::goodG2B1" file="CWE23_Relative_Path_Traversal__File_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1088,19 +980,13 @@
   </testcase>
   <testcase testcase_index="56">
     <file path="CWE23_Relative_Path_Traversal__File_22a.java">
-      <comment_flaw line="54" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_22a::bad" />
       <comment_flaw line="149" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_22a::goodG2B1" />
       <comment_flaw line="233" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_22a::goodG2B2" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_22b.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_22b::badSource" />
       <comment_fix line="126" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_22b::goodG2B1Source" />
       <comment_fix line="141" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_22b::badSource" file="CWE23_Relative_Path_Traversal__File_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="54" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_22a::bad" file="CWE23_Relative_Path_Traversal__File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="126" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_22b::goodG2B1Source" file="CWE23_Relative_Path_Traversal__File_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="149" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_22a::goodG2B1" file="CWE23_Relative_Path_Traversal__File_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1112,15 +998,9 @@
   </testcase>
   <testcase testcase_index="57">
     <file path="CWE23_Relative_Path_Traversal__File_31.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_31::bad" />
-      <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_31::bad" />
       <comment_fix line="201" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_31::goodG2B" />
       <comment_flaw line="223" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_31::bad" file="CWE23_Relative_Path_Traversal__File_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_31::bad" file="CWE23_Relative_Path_Traversal__File_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="201" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_31::goodG2B" file="CWE23_Relative_Path_Traversal__File_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="223" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_31::goodG2B" file="CWE23_Relative_Path_Traversal__File_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1128,15 +1008,9 @@
   </testcase>
   <testcase testcase_index="58">
     <file path="CWE23_Relative_Path_Traversal__File_41.java">
-      <comment_flaw line="52" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_41::badSink" />
-      <comment_flaw line="132" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_41::bad" />
       <comment_flaw line="207" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_41::goodG2BSink" />
       <comment_fix line="274" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="132" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_41::bad" file="CWE23_Relative_Path_Traversal__File_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="52" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_41::badSink" file="CWE23_Relative_Path_Traversal__File_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="274" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_41::goodG2B" file="CWE23_Relative_Path_Traversal__File_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="207" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_41::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1144,15 +1018,9 @@
   </testcase>
   <testcase testcase_index="59">
     <file path="CWE23_Relative_Path_Traversal__File_42.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_42::badSource" />
-      <comment_flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_42::bad" />
       <comment_fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_42::goodG2BSource" />
       <comment_flaw line="216" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_42::badSource" file="CWE23_Relative_Path_Traversal__File_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_42::bad" file="CWE23_Relative_Path_Traversal__File_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_42::goodG2BSource" file="CWE23_Relative_Path_Traversal__File_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="216" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_42::goodG2B" file="CWE23_Relative_Path_Traversal__File_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1160,15 +1028,9 @@
   </testcase>
   <testcase testcase_index="60">
     <file path="CWE23_Relative_Path_Traversal__File_45.java">
-      <comment_flaw line="57" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_45::badSink" />
-      <comment_flaw line="138" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_45::bad" />
       <comment_flaw line="215" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_45::goodG2BSink" />
       <comment_fix line="282" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="138" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_45::bad" file="CWE23_Relative_Path_Traversal__File_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="57" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_45::badSink" file="CWE23_Relative_Path_Traversal__File_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="282" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_45::goodG2B" file="CWE23_Relative_Path_Traversal__File_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="215" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_45::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1176,17 +1038,11 @@
   </testcase>
   <testcase testcase_index="61">
     <file path="CWE23_Relative_Path_Traversal__File_51a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_51a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_51a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_51b.java">
-      <comment_flaw line="45" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_51b::badSink" />
       <comment_flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_51a::bad" file="CWE23_Relative_Path_Traversal__File_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="45" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_51b::badSink" file="CWE23_Relative_Path_Traversal__File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_51a::goodG2B" file="CWE23_Relative_Path_Traversal__File_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_51b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1194,17 +1050,11 @@
   </testcase>
   <testcase testcase_index="62">
     <file path="CWE23_Relative_Path_Traversal__File_52a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_52a::bad" />
       <comment_fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_52a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_52c.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_52c::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_52a::bad" file="CWE23_Relative_Path_Traversal__File_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_52c::badSink" file="CWE23_Relative_Path_Traversal__File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_52a::goodG2B" file="CWE23_Relative_Path_Traversal__File_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_52c::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1212,17 +1062,11 @@
   </testcase>
   <testcase testcase_index="63">
     <file path="CWE23_Relative_Path_Traversal__File_53a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_53a::bad" />
       <comment_fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_53a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_53d.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_53d::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_53a::bad" file="CWE23_Relative_Path_Traversal__File_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_53d::badSink" file="CWE23_Relative_Path_Traversal__File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_53a::goodG2B" file="CWE23_Relative_Path_Traversal__File_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_53d::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1230,17 +1074,11 @@
   </testcase>
   <testcase testcase_index="64">
     <file path="CWE23_Relative_Path_Traversal__File_54a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_54a::bad" />
       <comment_fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_54a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_54e.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_54e::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_54a::bad" file="CWE23_Relative_Path_Traversal__File_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_54e::badSink" file="CWE23_Relative_Path_Traversal__File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_54a::goodG2B" file="CWE23_Relative_Path_Traversal__File_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_54e::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1248,17 +1086,11 @@
   </testcase>
   <testcase testcase_index="65">
     <file path="CWE23_Relative_Path_Traversal__File_61a.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_61a::bad" />
       <comment_flaw line="133" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_61a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_61b.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_61b::badSource" />
       <comment_fix line="111" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_61b::badSource" file="CWE23_Relative_Path_Traversal__File_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_61a::bad" file="CWE23_Relative_Path_Traversal__File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="111" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_61b::goodG2BSource" file="CWE23_Relative_Path_Traversal__File_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="133" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_61a::goodG2B" file="CWE23_Relative_Path_Traversal__File_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1266,17 +1098,11 @@
   </testcase>
   <testcase testcase_index="66">
     <file path="CWE23_Relative_Path_Traversal__File_66a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_66a::bad" />
       <comment_fix line="118" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_66a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_66b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_66b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_66a::bad" file="CWE23_Relative_Path_Traversal__File_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_66b::badSink" file="CWE23_Relative_Path_Traversal__File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="118" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_66a::goodG2B" file="CWE23_Relative_Path_Traversal__File_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_66b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1284,17 +1110,11 @@
   </testcase>
   <testcase testcase_index="67">
     <file path="CWE23_Relative_Path_Traversal__File_67a.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_67a::bad" />
       <comment_fix line="123" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_67a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_67b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_67b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_67a::bad" file="CWE23_Relative_Path_Traversal__File_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_67b::badSink" file="CWE23_Relative_Path_Traversal__File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="123" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_67a::goodG2B" file="CWE23_Relative_Path_Traversal__File_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_67b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1302,17 +1122,11 @@
   </testcase>
   <testcase testcase_index="68">
     <file path="CWE23_Relative_Path_Traversal__File_68a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_68a::bad" />
       <comment_fix line="115" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_68a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_68b.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_68b::badSink" />
       <comment_flaw line="127" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_68a::bad" file="CWE23_Relative_Path_Traversal__File_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_68b::badSink" file="CWE23_Relative_Path_Traversal__File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="115" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_68a::goodG2B" file="CWE23_Relative_Path_Traversal__File_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="127" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_68b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1320,17 +1134,11 @@
   </testcase>
   <testcase testcase_index="69">
     <file path="CWE23_Relative_Path_Traversal__File_71a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_71a::bad" />
       <comment_fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_71a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_71b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_71b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_71a::bad" file="CWE23_Relative_Path_Traversal__File_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_71b::badSink" file="CWE23_Relative_Path_Traversal__File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="116" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_71a::goodG2B" file="CWE23_Relative_Path_Traversal__File_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_71b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1338,17 +1146,11 @@
   </testcase>
   <testcase testcase_index="70">
     <file path="CWE23_Relative_Path_Traversal__File_72a.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_72a::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_72a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_72b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_72b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_72a::bad" file="CWE23_Relative_Path_Traversal__File_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_72b::badSink" file="CWE23_Relative_Path_Traversal__File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_72a::goodG2B" file="CWE23_Relative_Path_Traversal__File_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_72b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1356,17 +1158,11 @@
   </testcase>
   <testcase testcase_index="71">
     <file path="CWE23_Relative_Path_Traversal__File_73a.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_73a::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_73a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_73b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_73b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_73a::bad" file="CWE23_Relative_Path_Traversal__File_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_73b::badSink" file="CWE23_Relative_Path_Traversal__File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_73a::goodG2B" file="CWE23_Relative_Path_Traversal__File_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_73b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1374,17 +1170,11 @@
   </testcase>
   <testcase testcase_index="72">
     <file path="CWE23_Relative_Path_Traversal__File_74a.java">
-      <comment_flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_74a::bad" />
       <comment_fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_74a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_74b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_74b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="54" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_74a::bad" file="CWE23_Relative_Path_Traversal__File_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_74b::badSink" file="CWE23_Relative_Path_Traversal__File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="121" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_74a::goodG2B" file="CWE23_Relative_Path_Traversal__File_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_74b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -1392,37 +1182,23 @@
   </testcase>
   <testcase testcase_index="73">
     <file path="CWE23_Relative_Path_Traversal__File_75a.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_75a::bad" />
       <comment_fix line="161" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_75a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_75b.java">
-      <comment_flaw line="58" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_75b::badSink" />
       <comment_flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_75a::bad" file="CWE23_Relative_Path_Traversal__File_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="58" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_75b::badSink" file="CWE23_Relative_Path_Traversal__File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="161" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_75a::goodG2B" file="CWE23_Relative_Path_Traversal__File_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_75b::goodG2BSink" file="CWE23_Relative_Path_Traversal__File_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="74">
-    <file path="CWE23_Relative_Path_Traversal__File_81_bad.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_81_bad::action" />
-    </file>
     <file path="CWE23_Relative_Path_Traversal__File_81_goodG2B.java">
       <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_81_goodG2B::action" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__File_81a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_81a::bad" />
       <comment_fix line="117" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the file, which" function="CWE23_Relative_Path_Traversal__File_81a::bad" file="CWE23_Relative_Path_Traversal__File_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_81_bad::action" file="CWE23_Relative_Path_Traversal__File_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="117" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__File_81a::goodG2B" file="CWE23_Relative_Path_Traversal__File_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__File_81_goodG2B::action" file="CWE23_Relative_Path_Traversal__File_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2858,15 +2634,9 @@
   </testcase>
   <testcase testcase_index="149">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_01.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_01::bad" />
-      <comment_flaw line="105" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_01::bad" />
       <comment_fix line="177" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_01::goodG2B" />
       <comment_flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_01::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_01::bad" file="CWE23_Relative_Path_Traversal__URLConnection_01.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="105" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_01::bad" file="CWE23_Relative_Path_Traversal__URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="177" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_01::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_01.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_01::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_01.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2874,17 +2644,11 @@
   </testcase>
   <testcase testcase_index="150">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_02.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_02::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_02::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_02::bad" file="CWE23_Relative_Path_Traversal__URLConnection_02.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_02::bad" file="CWE23_Relative_Path_Traversal__URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_02.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_02::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_02.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2896,17 +2660,11 @@
   </testcase>
   <testcase testcase_index="151">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_03.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_03::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_03::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_03::bad" file="CWE23_Relative_Path_Traversal__URLConnection_03.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_03::bad" file="CWE23_Relative_Path_Traversal__URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_03.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_03::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_03.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2918,17 +2676,11 @@
   </testcase>
   <testcase testcase_index="152">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_04.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_04::bad" />
-      <comment_flaw line="117" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_04::bad" />
       <comment_fix line="192" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B1" />
       <comment_flaw line="211" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B1" />
       <comment_fix line="279" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B2" />
       <comment_flaw line="303" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_04::bad" file="CWE23_Relative_Path_Traversal__URLConnection_04.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="117" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_04::bad" file="CWE23_Relative_Path_Traversal__URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="192" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_04.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="211" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_04::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_04.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2940,17 +2692,11 @@
   </testcase>
   <testcase testcase_index="153">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_05.java">
-      <comment_flaw line="58" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_05::bad" />
-      <comment_flaw line="117" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_05::bad" />
       <comment_fix line="192" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B1" />
       <comment_flaw line="211" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B1" />
       <comment_fix line="279" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B2" />
       <comment_flaw line="303" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="58" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_05::bad" file="CWE23_Relative_Path_Traversal__URLConnection_05.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="117" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_05::bad" file="CWE23_Relative_Path_Traversal__URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="192" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_05.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="211" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_05::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_05.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2962,17 +2708,11 @@
   </testcase>
   <testcase testcase_index="154">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_06.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_06::bad" />
-      <comment_flaw line="116" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_06::bad" />
       <comment_fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B1" />
       <comment_flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B1" />
       <comment_fix line="278" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B2" />
       <comment_flaw line="302" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_06::bad" file="CWE23_Relative_Path_Traversal__URLConnection_06.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="116" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_06::bad" file="CWE23_Relative_Path_Traversal__URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_06.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_06::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_06.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -2984,17 +2724,11 @@
   </testcase>
   <testcase testcase_index="155">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_07.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_07::bad" />
-      <comment_flaw line="116" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_07::bad" />
       <comment_fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B1" />
       <comment_flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B1" />
       <comment_fix line="278" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B2" />
       <comment_flaw line="302" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_07::bad" file="CWE23_Relative_Path_Traversal__URLConnection_07.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="116" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_07::bad" file="CWE23_Relative_Path_Traversal__URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="191" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_07.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_07::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_07.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3006,17 +2740,11 @@
   </testcase>
   <testcase testcase_index="156">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_08.java">
-      <comment_flaw line="65" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_08::bad" />
-      <comment_flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_08::bad" />
       <comment_fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B1" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B1" />
       <comment_fix line="286" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B2" />
       <comment_flaw line="310" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="65" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_08::bad" file="CWE23_Relative_Path_Traversal__URLConnection_08.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="124" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_08::bad" file="CWE23_Relative_Path_Traversal__URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="199" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_08.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_08::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_08.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3028,17 +2756,11 @@
   </testcase>
   <testcase testcase_index="157">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_09.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_09::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_09::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_09::bad" file="CWE23_Relative_Path_Traversal__URLConnection_09.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_09::bad" file="CWE23_Relative_Path_Traversal__URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_09.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_09::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_09.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3050,17 +2772,11 @@
   </testcase>
   <testcase testcase_index="158">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_10.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_10::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_10::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_10::bad" file="CWE23_Relative_Path_Traversal__URLConnection_10.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_10::bad" file="CWE23_Relative_Path_Traversal__URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_10.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_10::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_10.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3072,17 +2788,11 @@
   </testcase>
   <testcase testcase_index="159">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_11.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_11::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_11::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_11::bad" file="CWE23_Relative_Path_Traversal__URLConnection_11.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_11::bad" file="CWE23_Relative_Path_Traversal__URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_11.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_11::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_11.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3094,15 +2804,9 @@
   </testcase>
   <testcase testcase_index="160">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_12.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_12::bad" />
-      <comment_flaw line="111" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_12::bad" />
       <comment_fix line="180" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_12::goodG2B" />
       <comment_flaw line="205" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_12::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_12::bad" file="CWE23_Relative_Path_Traversal__URLConnection_12.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="111" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_12::bad" file="CWE23_Relative_Path_Traversal__URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="multi_comment_line_extrema">
       <fix line="180" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_12::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_12.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="205" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_12::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_12.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3110,17 +2814,11 @@
   </testcase>
   <testcase testcase_index="161">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_13.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_13::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_13::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_13::bad" file="CWE23_Relative_Path_Traversal__URLConnection_13.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_13::bad" file="CWE23_Relative_Path_Traversal__URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_13.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_13::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_13.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3132,17 +2830,11 @@
   </testcase>
   <testcase testcase_index="162">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_14.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_14::bad" />
-      <comment_flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_14::bad" />
       <comment_fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B1" />
       <comment_flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B1" />
       <comment_fix line="272" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B2" />
       <comment_flaw line="296" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_14::bad" file="CWE23_Relative_Path_Traversal__URLConnection_14.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="110" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_14::bad" file="CWE23_Relative_Path_Traversal__URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="185" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_14.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="204" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_14::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_14.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3154,17 +2846,11 @@
   </testcase>
   <testcase testcase_index="163">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_15.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_15::bad" />
-      <comment_flaw line="112" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_15::bad" />
       <comment_fix line="187" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B1" />
       <comment_flaw line="206" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B1" />
       <comment_fix line="276" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B2" />
       <comment_flaw line="300" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B2" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_15::bad" file="CWE23_Relative_Path_Traversal__URLConnection_15.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="112" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_15::bad" file="CWE23_Relative_Path_Traversal__URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="same_function_line_order">
       <fix line="187" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_15.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="206" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_15::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_15.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3176,15 +2862,9 @@
   </testcase>
   <testcase testcase_index="164">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_16.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_16::bad" />
-      <comment_flaw line="106" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_16::bad" />
       <comment_fix line="175" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_16::goodG2B" />
       <comment_flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_16::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_16::bad" file="CWE23_Relative_Path_Traversal__URLConnection_16.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="106" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_16::bad" file="CWE23_Relative_Path_Traversal__URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="175" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_16::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_16.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_16::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_16.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3192,15 +2872,9 @@
   </testcase>
   <testcase testcase_index="165">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_17.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_17::bad" />
-      <comment_flaw line="106" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_17::bad" />
       <comment_fix line="174" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_17::goodG2B" />
       <comment_flaw line="192" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_17::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_17::bad" file="CWE23_Relative_Path_Traversal__URLConnection_17.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="106" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_17::bad" file="CWE23_Relative_Path_Traversal__URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="174" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_17::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_17.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="192" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_17::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_17.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3208,17 +2882,11 @@
   </testcase>
   <testcase testcase_index="166">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_21.java">
-      <comment_flaw line="60" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_21::bad" />
-      <comment_flaw line="138" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_21::bad_source" />
       <comment_flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B1" />
       <comment_fix line="293" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B1_source" />
       <comment_flaw line="323" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B2" />
       <comment_fix line="391" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B2_source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="138" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_21::bad_source" file="CWE23_Relative_Path_Traversal__URLConnection_21.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="60" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_21::bad" file="CWE23_Relative_Path_Traversal__URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="293" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B1_source" file="CWE23_Relative_Path_Traversal__URLConnection_21.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="218" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_21::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_21.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3230,19 +2898,13 @@
   </testcase>
   <testcase testcase_index="167">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_22a.java">
-      <comment_flaw line="54" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_22a::bad" />
       <comment_flaw line="149" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_22a::goodG2B1" />
       <comment_flaw line="233" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_22a::goodG2B2" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_22b.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_22b::badSource" />
       <comment_fix line="112" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_22b::goodG2B1Source" />
       <comment_fix line="127" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_22b::goodG2B2Source" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_22b::badSource" file="CWE23_Relative_Path_Traversal__URLConnection_22b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="54" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_22a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b1" flow_index="2" classification_method="function_name_rule">
       <fix line="112" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_22b::goodG2B1Source" file="CWE23_Relative_Path_Traversal__URLConnection_22b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="149" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_22a::goodG2B1" file="CWE23_Relative_Path_Traversal__URLConnection_22a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3254,15 +2916,9 @@
   </testcase>
   <testcase testcase_index="168">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_31.java">
-      <comment_flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_31::bad" />
-      <comment_flaw line="113" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_31::bad" />
       <comment_fix line="188" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_31::goodG2B" />
       <comment_flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_31::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="same_function_line_order">
-      <flaw line="56" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_31::bad" file="CWE23_Relative_Path_Traversal__URLConnection_31.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="113" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_31::bad" file="CWE23_Relative_Path_Traversal__URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="same_function_line_order">
       <fix line="188" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_31::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_31.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="210" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_31::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_31.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3270,15 +2926,9 @@
   </testcase>
   <testcase testcase_index="169">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_41.java">
-      <comment_flaw line="52" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_41::badSink" />
-      <comment_flaw line="131" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_41::bad" />
       <comment_flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_41::goodG2BSink" />
       <comment_fix line="261" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_41::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="131" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_41::bad" file="CWE23_Relative_Path_Traversal__URLConnection_41.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="52" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_41::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="261" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_41::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_41.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="194" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_41::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_41.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3286,15 +2936,9 @@
   </testcase>
   <testcase testcase_index="170">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_42.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_42::badSource" />
-      <comment_flaw line="112" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_42::bad" />
       <comment_fix line="178" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_42::goodG2BSource" />
       <comment_flaw line="203" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_42::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_42::badSource" file="CWE23_Relative_Path_Traversal__URLConnection_42.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="112" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_42::bad" file="CWE23_Relative_Path_Traversal__URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="178" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_42::goodG2BSource" file="CWE23_Relative_Path_Traversal__URLConnection_42.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="203" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_42::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_42.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3302,15 +2946,9 @@
   </testcase>
   <testcase testcase_index="171">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_45.java">
-      <comment_flaw line="57" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_45::badSink" />
-      <comment_flaw line="137" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_45::bad" />
       <comment_flaw line="202" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_45::goodG2BSink" />
       <comment_fix line="269" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_45::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="137" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_45::bad" file="CWE23_Relative_Path_Traversal__URLConnection_45.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="57" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_45::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="269" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_45::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_45.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="202" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_45::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_45.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3318,17 +2956,11 @@
   </testcase>
   <testcase testcase_index="172">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_51a.java">
-      <comment_flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_51a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_51a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_51b.java">
-      <comment_flaw line="45" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_51b::badSink" />
       <comment_flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_51b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="51" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_51a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_51a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="45" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_51b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_51a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_51a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="125" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_51b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_51b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3336,17 +2968,11 @@
   </testcase>
   <testcase testcase_index="173">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_52a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_52a::bad" />
       <comment_fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_52a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_52c.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_52c::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_52c::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_52a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_52a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_52c::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_52a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_52a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_52c::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_52c.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3354,17 +2980,11 @@
   </testcase>
   <testcase testcase_index="174">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_53a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_53a::bad" />
       <comment_fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_53a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_53d.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_53d::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_53d::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_53a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_53a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_53d::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_53a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_53a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_53d::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_53d.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3372,17 +2992,11 @@
   </testcase>
   <testcase testcase_index="175">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_54a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_54a::bad" />
       <comment_fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_54a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_54e.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_54e::badSink" />
       <comment_flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_54e::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_54a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_54a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_54e::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_54a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_54a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="126" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_54e::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_54e.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3390,17 +3004,11 @@
   </testcase>
   <testcase testcase_index="176">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_61a.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_61a::bad" />
       <comment_flaw line="133" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_61a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_61b.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_61b::badSource" />
       <comment_fix line="98" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_61b::goodG2BSource" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_61b::badSource" file="CWE23_Relative_Path_Traversal__URLConnection_61b.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_61a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="98" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_61b::goodG2BSource" file="CWE23_Relative_Path_Traversal__URLConnection_61b.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="133" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_61a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_61a.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3408,17 +3016,11 @@
   </testcase>
   <testcase testcase_index="177">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_66a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_66a::bad" />
       <comment_fix line="105" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_66a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_66b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_66b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_66b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_66a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_66a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_66b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="105" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_66a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_66a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_66b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_66b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3426,17 +3028,11 @@
   </testcase>
   <testcase testcase_index="178">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_67a.java">
-      <comment_flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_67a::bad" />
       <comment_fix line="110" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_67a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_67b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_67b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_67b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="57" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_67a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_67a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_67b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="110" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_67a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_67a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_67b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_67b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3444,17 +3040,11 @@
   </testcase>
   <testcase testcase_index="179">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_68a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_68a::bad" />
       <comment_fix line="102" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_68a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_68b.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_68b::badSink" />
       <comment_flaw line="127" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_68b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_68a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_68a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_68b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="102" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_68a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_68a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="127" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_68b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_68b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3462,17 +3052,11 @@
   </testcase>
   <testcase testcase_index="180">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_71a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_71a::bad" />
       <comment_fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_71a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_71b.java">
-      <comment_flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_71b::badSink" />
       <comment_flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_71b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_71a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_71a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="47" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_71b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="103" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_71a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_71a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="128" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_71b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_71b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3480,17 +3064,11 @@
   </testcase>
   <testcase testcase_index="181">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_72a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_72a::bad" />
       <comment_fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_72a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_72b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_72b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_72b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_72a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_72a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_72b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_72a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_72a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_72b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_72b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3498,17 +3076,11 @@
   </testcase>
   <testcase testcase_index="182">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_73a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_73a::bad" />
       <comment_fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_73a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_73b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_73b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_73b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_73a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_73a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_73b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_73a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_73a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_73b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_73b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3516,17 +3088,11 @@
   </testcase>
   <testcase testcase_index="183">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_74a.java">
-      <comment_flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_74a::bad" />
       <comment_fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_74a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_74b.java">
-      <comment_flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_74b::badSink" />
       <comment_flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_74b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="53" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_74a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_74a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="48" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_74b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="108" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_74a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_74a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="129" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_74b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_74b.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -3534,37 +3100,23 @@
   </testcase>
   <testcase testcase_index="184">
     <file path="CWE23_Relative_Path_Traversal__URLConnection_75a.java">
-      <comment_flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_75a::bad" />
       <comment_fix line="148" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_75a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_75b.java">
-      <comment_flaw line="58" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_75b::badSink" />
       <comment_flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="55" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_75a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="58" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_75b::badSink" file="CWE23_Relative_Path_Traversal__URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="148" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_75a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_75b::goodG2BSink" file="CWE23_Relative_Path_Traversal__URLConnection_75b.java" origin="comment_flaw" role="sink" safety="bad" />
     </flow>
   </testcase>
   <testcase testcase_index="185">
-    <file path="CWE23_Relative_Path_Traversal__URLConnection_81_bad.java">
-      <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_81_bad::action" />
-    </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_81_goodG2B.java">
       <comment_flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_81_goodG2B::action" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__URLConnection_81a.java">
-      <comment_flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_81a::bad" />
       <comment_fix line="104" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_81a::goodG2B" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="function_name_rule">
-      <flaw line="52" code="/* This will be reading the first &quot;line&quot; of the response body," function="CWE23_Relative_Path_Traversal__URLConnection_81a::bad" file="CWE23_Relative_Path_Traversal__URLConnection_81a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_81_bad::action" file="CWE23_Relative_Path_Traversal__URLConnection_81_bad.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="104" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__URLConnection_81a::goodG2B" file="CWE23_Relative_Path_Traversal__URLConnection_81a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="46" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__URLConnection_81_goodG2B::action" file="CWE23_Relative_Path_Traversal__URLConnection_81_goodG2B.java" origin="comment_flaw" role="sink" safety="bad" />
@@ -4950,17 +4502,11 @@
   </testcase>
   <testcase testcase_index="258">
     <file path="CWE23_Relative_Path_Traversal__console_readLine_75a.java">
-      <comment_flaw line="52" code="data = readerBuffered.readLine();" function="CWE23_Relative_Path_Traversal__console_readLine_75a::bad" />
-      <comment_flaw line="87" code="/* serialize data to a byte array */" function="CWE23_Relative_Path_Traversal__console_readLine_75a::bad" />
       <comment_fix line="143" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__console_readLine_75a::goodG2B" />
     </file>
     <file path="CWE23_Relative_Path_Traversal__console_readLine_75b.java">
       <comment_flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__console_readLine_75b::goodG2BSink" />
     </file>
-    <flow type="b2b" flow_index="1" classification_method="multi_comment_line_extrema">
-      <flaw line="52" code="data = readerBuffered.readLine();" function="CWE23_Relative_Path_Traversal__console_readLine_75a::bad" file="CWE23_Relative_Path_Traversal__console_readLine_75a.java" origin="comment_flaw" role="source" safety="bad" />
-      <flaw line="87" code="/* serialize data to a byte array */" function="CWE23_Relative_Path_Traversal__console_readLine_75a::bad" file="CWE23_Relative_Path_Traversal__console_readLine_75a.java" origin="comment_flaw" role="sink" safety="bad" />
-    </flow>
     <flow type="g2b" flow_index="2" classification_method="function_name_rule">
       <fix line="143" code="data = &quot;foo&quot;;" function="CWE23_Relative_Path_Traversal__console_readLine_75a::goodG2B" file="CWE23_Relative_Path_Traversal__console_readLine_75a.java" origin="comment_fix" role="source" safety="good" />
       <flaw line="183" code="File file = new File(root + data);" function="CWE23_Relative_Path_Traversal__console_readLine_75b::goodG2BSink" file="CWE23_Relative_Path_Traversal__console_readLine_75b.java" origin="comment_flaw" role="sink" safety="bad" />
