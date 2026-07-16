@@ -1,0 +1,282 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Testcase index: 412
+Flow count: 3
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 64 CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 139
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:64
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:139
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:64
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:139
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sinkLine -> 139, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin, sourceLine -> 64)
+Creating project `joern-trace-6daaf625-1b3e-4982-82ab-4d947eee4f86` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-6daaf625-1b3e-4982-82ab-4d947eee4f86/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-6daaf625-1b3e-4982-82ab-4d947eee4f86/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:64 (4 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:139 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.100 seconds
+
+=== Source-to-Sink Trace 1/2 ===
+
+[0] line=64 | readerBuffered.readLine()
+        ↓
+[1] line=64 | data = readerBuffered.readLine()
+        ↓
+[2] line=139 | dbConnection.setCatalog(data)
+
+=== Source-to-Sink Trace 2/2 ===
+
+[0] line=64 | data = readerBuffered.readLine()
+        ↓
+[1] line=139 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=46, col=9 | if (this.privateTrue)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=46, col=13 | this.privateTrue
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=56, col=17 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=58, col=21 | listener
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=58, col=32 | new ServerSocket(39543)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=58, col=49 | 39543
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=59, col=21 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=59, col=30 | listener.accept()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=59, col=30 | listener
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=61, col=21 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=61, col=41 | new InputStreamReader(socket.getInputStream(), "UTF-8")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=61, col=63 | socket.getInputStream()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=61, col=63 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=61, col=88 | "UTF-8"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=62, col=21 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=62, col=38 | new BufferedReader(readerInputStream)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=62, col=57 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=64, col=21 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=64, col=21 | data = readerBuffered.readLine()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=64, col=28 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=64, col=28 | readerBuffered.readLine()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=66, col=17 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=68, col=21 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=68, col=35 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=68, col=50 | "Error with stream reading"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=68, col=79 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=71, col=17 | finally
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=73, col=21 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=75, col=25 | if (readerBuffered != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=75, col=29 | readerBuffered != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=75, col=29 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=75, col=47 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=77, col=29 | readerBuffered.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=77, col=29 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=80, col=21 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=82, col=25 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=82, col=39 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=82, col=54 | "Error closing BufferedReader"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=82, col=86 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=85, col=21 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=87, col=25 | if (readerInputStream != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=87, col=29 | readerInputStream != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=87, col=29 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=87, col=50 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=89, col=29 | readerInputStream.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=89, col=29 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=92, col=21 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=94, col=25 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=94, col=39 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=94, col=54 | "Error closing InputStreamReader"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=94, col=89 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=98, col=21 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=100, col=25 | if (socket != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=100, col=29 | socket != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=100, col=29 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=100, col=39 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=102, col=29 | socket.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=102, col=29 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=105, col=21 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=107, col=25 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=107, col=39 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=107, col=54 | "Error closing Socket"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=107, col=78 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=110, col=21 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=112, col=25 | if (listener != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=112, col=29 | listener != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=112, col=29 | listener
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=112, col=41 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=114, col=29 | listener.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=114, col=29 | listener
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=117, col=21 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=119, col=25 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=119, col=39 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=119, col=54 | "Error closing ServerSocket"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=119, col=84 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=128, col=13 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=128, col=20 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=133, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=135, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=135, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=135, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=139, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=139, col=13 | dbConnection.setCatalog(data)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=139, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 6
+Data nodes        : 44
+Control nodes     : 10
+Control DDG nodes : 42
+AST controls      : 17
+Final slice nodes : 87
+Slice time        : 0.027 seconds
+
+=== Summary ===
+Raw paths    : 9
+Unique traces: 2
+Flow time    : 0.100 seconds
+=== Flow 2 (g2b1) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 176 CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 188
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:176
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:188
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:176
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:188
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sinkLine -> 188, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin, sourceLine -> 176)
+Creating project `joern-trace-102b2127-bd5c-4547-857b-20a367e36b4f` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-102b2127-bd5c-4547-857b-20a367e36b4f/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-102b2127-bd5c-4547-857b-20a367e36b4f/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:176 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:188 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.093 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=176 | data = "foo"
+        ↓
+[1] line=188 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=166, col=9 | if (this.privateFalse)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=166, col=13 | this.privateFalse
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=170, col=13 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=170, col=20 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=176, col=13 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=176, col=20 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=182, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=184, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=184, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=184, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=188, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=188, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 3
+Data nodes        : 9
+Control nodes     : 1
+Control DDG nodes : 1
+AST controls      : 2
+Final slice nodes : 12
+Slice time        : 0.006 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.093 seconds
+=== Flow 3 (g2b2) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 218 CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java 235
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:218
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:235
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:218
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:235
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java, sinkLine -> 235, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin, sourceLine -> 218)
+Creating project `joern-trace-7263a8d6-d290-4b15-9556-90d2da12801d` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-7263a8d6-d290-4b15-9556-90d2da12801d/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-7263a8d6-d290-4b15-9556-90d2da12801d/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-412-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:218 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java:235 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.082 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=218 | data = "foo"
+        ↓
+[1] line=235 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=215, col=9 | if (this.privateTrue)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=215, col=13 | this.privateTrue
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=218, col=13 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=218, col=20 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=224, col=13 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=224, col=20 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=229, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=231, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=231, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=231, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=235, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_05.java | line=235, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 4
+Data nodes        : 9
+Control nodes     : 1
+Control DDG nodes : 1
+AST controls      : 2
+Final slice nodes : 12
+Slice time        : 0.007 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.082 seconds

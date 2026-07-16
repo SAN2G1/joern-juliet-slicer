@@ -1,0 +1,235 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin
+Testcase index: 244
+Flow count: 2
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java 50 CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java 101
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:50
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:101
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:50
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:101
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java, sinkLine -> 101, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin, sourceLine -> 50)
+Creating project `joern-trace-1f5a8b18-dea5-4b88-bc13-3014fd550be2` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-1f5a8b18-dea5-4b88-bc13-3014fd550be2/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-1f5a8b18-dea5-4b88-bc13-3014fd550be2/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:50 (4 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:101 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.110 seconds
+
+=== Source-to-Sink Trace 1/2 ===
+
+[0] line=50 | readerBuffered.readLine()
+        ↓
+[1] line=50 | data = readerBuffered.readLine()
+        ↓
+[2] line=85 | return data;
+        ↓
+[3] line=33 | RET
+        ↓
+[4] line=91 | this.badSource()
+        ↓
+[5] line=91 | String data = badSource()
+        ↓
+[6] line=101 | dbConnection.setCatalog(data)
+
+=== Source-to-Sink Trace 2/2 ===
+
+[0] line=50 | data = readerBuffered.readLine()
+        ↓
+[1] line=85 | return data;
+        ↓
+[2] line=33 | RET
+        ↓
+[3] line=91 | this.badSource()
+        ↓
+[4] line=91 | String data = badSource()
+        ↓
+[5] line=101 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=33, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=33, col=13 | RET
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=37, col=9 | data = ""
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=37, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=37, col=16 | ""
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=40, col=31 | InputStreamReader readerInputStream = null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=40, col=31 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=40, col=51 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=41, col=28 | BufferedReader readerBuffered = null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=41, col=28 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=41, col=45 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=44, col=13 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=-1 | new InputStreamReader(System.in, "UTF-8")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=17 | readerInputStream = new InputStreamReader(System.in, "UTF-8")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=17 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=37 | new InputStreamReader(System.in, "UTF-8")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=59 | System.in
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=59 | System
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=46, col=70 | "UTF-8"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=47, col=-1 | new BufferedReader(readerInputStream)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=47, col=17 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=47, col=17 | readerBuffered = new BufferedReader(readerInputStream)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=47, col=34 | new BufferedReader(readerInputStream)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=47, col=53 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=50, col=17 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=50, col=17 | data = readerBuffered.readLine()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=50, col=24 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=50, col=24 | readerBuffered.readLine()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=52, col=13 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=54, col=17 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=54, col=17 | IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=54, col=31 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=54, col=46 | "Error with stream reading"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=54, col=75 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=57, col=13 | finally
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=58, col=17 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=60, col=21 | if (readerBuffered != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=60, col=25 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=60, col=25 | readerBuffered != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=60, col=43 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=62, col=25 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=62, col=25 | readerBuffered.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=65, col=17 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=67, col=21 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=67, col=21 | IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=67, col=35 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=67, col=50 | "Error closing BufferedReader"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=67, col=82 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=70, col=17 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=72, col=21 | if (readerInputStream != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=72, col=25 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=72, col=25 | readerInputStream != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=72, col=46 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=74, col=25 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=74, col=25 | readerInputStream.close()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=77, col=17 | catch
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=79, col=21 | IO.logger
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=79, col=21 | IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=79, col=35 | Level.WARNING
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=79, col=50 | "Error closing InputStreamReader"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=79, col=85 | exceptIO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=85, col=9 | return data;
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=85, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=89, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=91, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=91, col=23 | this.badSource()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=91, col=23 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=95, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=97, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=97, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=97, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=101, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=101, col=13 | dbConnection.setCatalog(data)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=101, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 11
+Data nodes        : 66
+Control nodes     : 5
+Control DDG nodes : 23
+AST controls      : 10
+Final slice nodes : 76
+Slice time        : 0.026 seconds
+
+=== Summary ===
+Raw paths    : 9
+Unique traces: 2
+Flow time    : 0.110 seconds
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java 129 CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java 147
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:129
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:147
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:129
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:147
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java, sinkLine -> 147, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin, sourceLine -> 129)
+Creating project `joern-trace-61455826-e57c-4da6-ace8-4e71f929279a` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-61455826-e57c-4da6-ace8-4e71f929279a/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-61455826-e57c-4da6-ace8-4e71f929279a/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-244-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:129 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java:147 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.104 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=129 | data = "foo"
+        ↓
+[1] line=131 | return data;
+        ↓
+[2] line=124 | RET
+        ↓
+[3] line=137 | this.goodG2BSource()
+        ↓
+[4] line=137 | String data = goodG2BSource()
+        ↓
+[5] line=147 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=124, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=124, col=13 | RET
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=129, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=129, col=9 | data = "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=129, col=16 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=131, col=9 | return data;
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=131, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=135, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=137, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=137, col=23 | this.goodG2BSource()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=137, col=23 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=141, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=143, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=143, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=143, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=147, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__console_readLine_42.java | line=147, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 8
+Data nodes        : 16
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 17
+Slice time        : 0.010 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.104 seconds

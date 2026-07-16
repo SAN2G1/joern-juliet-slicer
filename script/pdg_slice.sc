@@ -1,6 +1,7 @@
 import io.joern.dataflowengineoss.language.*
 import io.shiftleft.semanticcpg.language.*
 import io.shiftleft.codepropertygraph.generated.nodes.CfgNode
+import java.util.UUID
 
 import scala.collection.mutable
 
@@ -116,7 +117,7 @@ def backwardDdg(
   )
 
   val projectName =
-    s"joern-trace-${System.currentTimeMillis()}"
+    s"joern-trace-${UUID.randomUUID().toString}"
 
   val imported =
     importCpg(cpgPath, projectName)

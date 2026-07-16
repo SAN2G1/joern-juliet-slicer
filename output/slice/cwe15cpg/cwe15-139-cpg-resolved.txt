@@ -1,0 +1,182 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin
+Testcase index: 139
+Flow count: 2
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java 31 CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java 41
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:31
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:41
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:31
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:41
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java, sinkLine -> 41, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin, sourceLine -> 31)
+Creating project `joern-trace-13d7d194-e90c-463d-b42d-7b4a2172396c` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-13d7d194-e90c-463d-b42d-7b4a2172396c/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-13d7d194-e90c-463d-b42d-7b4a2172396c/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:31 (5 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:41 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.112 seconds
+
+=== Source-to-Sink Trace 1/2 ===
+
+[0] line=31 | System.getProperty("user.home")
+        ↓
+[1] line=31 | data = System.getProperty("user.home")
+        ↓
+[2] line=33 | return data;
+        ↓
+[3] line=25 | RET
+        ↓
+[4] line=31 | this.badSource()
+        ↓
+[5] line=31 | String data = (new CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b()).badSource()
+        ↓
+[6] line=41 | dbConnection.setCatalog(data)
+
+=== Source-to-Sink Trace 2/2 ===
+
+[0] line=31 | data = System.getProperty("user.home")
+        ↓
+[1] line=33 | return data;
+        ↓
+[2] line=25 | RET
+        ↓
+[3] line=31 | this.badSource()
+        ↓
+[4] line=31 | String data = (new CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b()).badSource()
+        ↓
+[5] line=41 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=31, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=31, col=23 | this.badSource()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=31, col=24 | <empty>
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=31, col=24 | $obj0
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=31, col=24 | new CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=35, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=37, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=37, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=37, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=41, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=41, col=37 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=25, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=25, col=12 | RET
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=31, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=31, col=9 | data = System.getProperty("user.home")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=31, col=16 | System.getProperty("user.home")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=31, col=16 | System
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=31, col=35 | "user.home"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=33, col=9 | return data;
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=33, col=16 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 8
+Data nodes        : 20
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 21
+Slice time        : 0.011 seconds
+
+=== Summary ===
+Raw paths    : 12
+Unique traces: 2
+Flow time    : 0.112 seconds
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java 42 CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java 82
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:42
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:82
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:42
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:82
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java, sinkLine -> 82, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin, sourceLine -> 42)
+Creating project `joern-trace-07c42c8d-cb06-4069-9d52-69947c6af512` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-07c42c8d-cb06-4069-9d52-69947c6af512/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-07c42c8d-cb06-4069-9d52-69947c6af512/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-139-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java:42 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java:82 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.101 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=42 | data = "foo"
+        ↓
+[1] line=44 | return data;
+        ↓
+[2] line=37 | RET
+        ↓
+[3] line=72 | this.goodG2BSource()
+        ↓
+[4] line=72 | String data = (new CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b()).goodG2BSource()
+        ↓
+[5] line=82 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=72, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=72, col=23 | this.goodG2BSource()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=72, col=24 | <empty>
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=72, col=24 | $obj1
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=72, col=24 | new CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=76, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=78, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=78, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=78, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=82, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61a.java | line=82, col=37 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=37, col=5 | this
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=37, col=12 | RET
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=42, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=42, col=9 | data = "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=42, col=16 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=44, col=9 | return data;
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__Property_61b.java | line=44, col=16 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 9
+Data nodes        : 18
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 19
+Slice time        : 0.015 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.101 seconds

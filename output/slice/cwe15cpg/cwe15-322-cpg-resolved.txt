@@ -1,0 +1,196 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin
+Testcase index: 322
+Flow count: 2
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java 38 CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java 40
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:38
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:40
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:38
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:40
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java, sinkLine -> 40, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin, sourceLine -> 38)
+Creating project `joern-trace-9b253ade-2d7a-4a2b-ad89-2a6fe316eb38` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-9b253ade-2d7a-4a2b-ad89-2a6fe316eb38/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-9b253ade-2d7a-4a2b-ad89-2a6fe316eb38/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:38 (6 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:40 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.114 seconds
+
+=== Source-to-Sink Trace 1/2 ===
+
+[0] line=38 | cookieSources[0].getValue()
+        ↓
+[1] line=38 | data = cookieSources[0].getValue()
+        ↓
+[2] line=42 | this.badSink(data, request, response)
+        ↓
+[3] line=25 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[4] line=27 | this.badSink(data, request, response)
+        ↓
+[5] line=25 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[6] line=27 | this.badSink(data, request, response)
+        ↓
+[7] line=29 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[8] line=40 | dbConnection.setCatalog(data)
+
+=== Source-to-Sink Trace 2/2 ===
+
+[0] line=38 | data = cookieSources[0].getValue()
+        ↓
+[1] line=42 | this.badSink(data, request, response)
+        ↓
+[2] line=25 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[3] line=27 | this.badSink(data, request, response)
+        ↓
+[4] line=25 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[5] line=27 | this.badSink(data, request, response)
+        ↓
+[6] line=29 | badSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[7] line=40 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=26, col=21 | HttpServletRequest request
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=30, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=30, col=16 | ""
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=34, col=20 | cookieSources
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=34, col=38 | request.getCookies()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=34, col=38 | request
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=35, col=13 | if (cookieSources != null)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=35, col=17 | cookieSources
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=35, col=17 | cookieSources != null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=35, col=34 | null
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=38, col=17 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=38, col=24 | cookieSources[0].getValue()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=38, col=24 | cookieSources[0]
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=42, col=107 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53b.java | line=25, col=25 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53b.java | line=27, col=107 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53c.java | line=25, col=25 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53c.java | line=27, col=107 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=29, col=25 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=34, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=36, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=36, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=36, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=40, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=40, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 10
+Data nodes        : 22
+Control nodes     : 1
+Control DDG nodes : 7
+AST controls      : 2
+Final slice nodes : 25
+Slice time        : 0.013 seconds
+
+=== Summary ===
+Raw paths    : 9
+Unique traces: 2
+Flow time    : 0.114 seconds
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java 56 CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java 75
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:56
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:75
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:56
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:75
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java, sinkLine -> 75, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin, sourceLine -> 56)
+Creating project `joern-trace-a42120e7-995a-4119-b3f4-07709fd3208d` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-a42120e7-995a-4119-b3f4-07709fd3208d/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-a42120e7-995a-4119-b3f4-07709fd3208d/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-322-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java:56 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java:75 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.110 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=56 | data = "foo"
+        ↓
+[1] line=58 | this.goodG2BSink(data, request, response)
+        ↓
+[2] line=31 | goodG2BSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[3] line=33 | this.goodG2BSink(data, request, response)
+        ↓
+[4] line=31 | goodG2BSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[5] line=33 | this.goodG2BSink(data, request, response)
+        ↓
+[6] line=64 | goodG2BSink(this, String data, HttpServletRequest request, HttpServletResponse response)
+        ↓
+[7] line=75 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=56, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=56, col=16 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53a.java | line=58, col=111 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53b.java | line=31, col=29 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53b.java | line=33, col=111 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53c.java | line=31, col=29 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53c.java | line=33, col=111 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=64, col=29 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=69, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=71, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=71, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=71, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=75, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=75, col=13 | dbConnection.setCatalog(data)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_53d.java | line=75, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 11
+Data nodes        : 14
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 15
+Slice time        : 0.006 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.110 seconds

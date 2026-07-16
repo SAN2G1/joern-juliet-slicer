@@ -1,0 +1,76 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin
+Testcase index: 332
+Flow count: 2
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java 43 CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java 52
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:43
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:52
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:43
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:52
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java, sinkLine -> 52, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin, sourceLine -> 43)
+Creating project `joern-trace-4de9394c-e5d0-409b-a3e8-f345d558b1d0` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-4de9394c-e5d0-409b-a3e8-f345d558b1d0/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-4de9394c-e5d0-409b-a3e8-f345d558b1d0/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:43 (6 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:52 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.083 seconds
+
+=== Source-to-Sink Trace ===
+No data-flow path found.
+
+=== Summary ===
+Raw paths    : 0
+Unique traces: 0
+Flow time    : 0.083 seconds
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java 103 CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java 132
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:103
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:132
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:103
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:132
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java, sinkLine -> 132, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin, sourceLine -> 103)
+Creating project `joern-trace-65b484ae-5396-43ea-864a-91ac70526575` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-65b484ae-5396-43ea-864a-91ac70526575/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-65b484ae-5396-43ea-864a-91ac70526575/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-332-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75a.java:103 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__getCookies_Servlet_75b.java:132 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.087 seconds
+
+=== Source-to-Sink Trace ===
+No data-flow path found.
+
+=== Summary ===
+Raw paths    : 0
+Unique traces: 0
+Flow time    : 0.087 seconds

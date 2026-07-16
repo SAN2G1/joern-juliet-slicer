@@ -1,0 +1,72 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin
+Testcase index: 172
+Flow count: 1
+
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java 101 CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java 74
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java:101
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java:74
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java:101
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java:74
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java, sinkLine -> 74, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin, sourceLine -> 101)
+Creating project `joern-trace-8f59ae25-0a4c-4180-a77f-85974706d3c6` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-8f59ae25-0a4c-4180-a77f-85974706d3c6/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-8f59ae25-0a4c-4180-a77f-85974706d3c6/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-172-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java:101 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java:74 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.086 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=101 | data = "foo"
+        ↓
+[1] line=103 | this.goodG2BSink(data)
+        ↓
+[2] line=63 | goodG2BSink(this, String data)
+        ↓
+[3] line=74 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java | line=101, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java | line=101, col=16 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51a.java | line=103, col=106 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=63, col=29 | String data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=68, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=70, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=70, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=70, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=74, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__URLConnection_51b.java | line=74, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 6
+Data nodes        : 9
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 10
+Slice time        : 0.009 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.086 seconds

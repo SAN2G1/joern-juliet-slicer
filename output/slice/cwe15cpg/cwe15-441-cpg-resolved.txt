@@ -1,0 +1,277 @@
+CPG: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin
+Testcase index: 441
+Flow count: 2
+
+=== Flow 1 (b2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java 59 CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java 42
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:59
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:42
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:59
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:42
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java, sinkLine -> 42, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin, sourceLine -> 59)
+Creating project `joern-trace-e9b865c8-c174-4eda-bc21-b7ed8863dd4f` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-e9b865c8-c174-4eda-bc21-b7ed8863dd4f/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-e9b865c8-c174-4eda-bc21-b7ed8863dd4f/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:59 (4 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:42 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.105 seconds
+
+=== Source-to-Sink Trace 1/2 ===
+
+[0] line=59 | readerBuffered.readLine()
+        ↓
+[1] line=59 | data = readerBuffered.readLine()
+        ↓
+[2] line=120 | dataLinkedList.add(0, data)
+        ↓
+[3] line=121 | dataLinkedList.add(1, data)
+        ↓
+[4] line=122 | dataLinkedList.add(2, data)
+        ↓
+[5] line=123 | this.badSink(dataLinkedList)
+        ↓
+[6] line=30 | badSink(this, LinkedList<String> dataLinkedList)
+        ↓
+[7] line=32 | dataLinkedList.remove(2)
+        ↓
+[8] line=32 | String data = dataLinkedList.remove(2)
+        ↓
+[9] line=42 | dbConnection.setCatalog(data)
+
+=== Source-to-Sink Trace 2/2 ===
+
+[0] line=59 | data = readerBuffered.readLine()
+        ↓
+[1] line=120 | dataLinkedList.add(0, data)
+        ↓
+[2] line=121 | dataLinkedList.add(1, data)
+        ↓
+[3] line=122 | dataLinkedList.add(2, data)
+        ↓
+[4] line=123 | this.badSink(dataLinkedList)
+        ↓
+[5] line=30 | badSink(this, LinkedList<String> dataLinkedList)
+        ↓
+[6] line=32 | dataLinkedList.remove(2)
+        ↓
+[7] line=32 | String data = dataLinkedList.remove(2)
+        ↓
+[8] line=42 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=48, col=13 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=51, col=17 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=51, col=26 | listener.accept()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=55, col=17 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=55, col=37 | new InputStreamReader(socket.getInputStream(), "UTF-8")
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=55, col=59 | socket.getInputStream()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=55, col=59 | socket
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=55, col=84 | "UTF-8"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=56, col=17 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=56, col=34 | new BufferedReader(readerInputStream)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=56, col=53 | readerInputStream
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=59, col=17 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=59, col=24 | readerBuffered.readLine()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=59, col=24 | readerBuffered
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=119, col=28 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=119, col=45 | new LinkedList<String>()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=120, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=120, col=28 | 0
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=120, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=121, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=121, col=28 | 1
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=121, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=122, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=122, col=28 | 2
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=122, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=123, col=99 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=30, col=25 | LinkedList<String> dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=32, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=32, col=23 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=32, col=23 | dataLinkedList.remove(2)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=32, col=45 | 2
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=36, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=38, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=38, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=38, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=42, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=42, col=13 | dbConnection.setCatalog(data)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=42, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 14
+Data nodes        : 39
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 2
+Final slice nodes : 41
+Slice time        : 0.014 seconds
+
+=== Summary ===
+Raw paths    : 9
+Unique traces: 2
+Flow time    : 0.105 seconds
+=== Flow 2 (g2b) ===
+Command: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/run_pdg_slice.sh /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java 137 CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java 78
+Source : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:137
+Sink   : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:78
+Exit   : 0
+
+=== Joern PDG Slice ===
+CPG path    : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:137
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:78
+Scala script: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc
+
+executing /home/swlab-jueon/swvul/tools/joern-juliet-slicer/script/pdg_slice.sc with params=HashMap(sinkFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java, sourceFile -> CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java, sinkLine -> 78, cpgPath -> /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin, sourceLine -> 137)
+Error loading project at /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-191ea040-5b4c-45db-9fe4-faa5dca67572 - skipping: 
+java.nio.file.NoSuchFileException: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-191ea040-5b4c-45db-9fe4-faa5dca67572/project.json
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at ujson.Readable$$anon$1.transform(Readable.scala:26)
+	at ujson.Readable$.transform(Readable.scala:15)
+	at ujson.Readable$.transform(Readable.scala:14)
+	at upickle.core.BufferedValue$.maybeSortKeysTransform(BufferedValue.scala:76)
+	at ujson.package$.transform(package.scala:8)
+	at ujson.package$.read$$anonfun$1(package.scala:15)
+	at upickle.core.TraceVisitor$.withTrace(TraceVisitor.scala:18)
+	at ujson.package$.read(package.scala:15)
+	at io.joern.console.workspacehandling.WorkspaceLoader.readProjectFile(WorkspaceLoader.scala:52)
+	at io.joern.console.workspacehandling.WorkspaceLoader.loadProject$$anonfun$1(WorkspaceLoader.scala:35)
+	at scala.util.Try$.apply(Try.scala:217)
+	at io.joern.console.workspacehandling.WorkspaceLoader.loadProject(WorkspaceLoader.scala:37)
+	at io.joern.console.workspacehandling.WorkspaceLoader.loadProjectsFromFs$$anonfun$2(WorkspaceLoader.scala:30)
+	at scala.collection.immutable.LazyList$.$anonfun$flatMapImpl$1(LazyList.scala:1073)
+	at scala.collection.immutable.LazyList.scala$collection$immutable$LazyList$$state$lzycompute(LazyList.scala:282)
+	at scala.collection.immutable.LazyList.scala$collection$immutable$LazyList$$state(LazyList.scala:273)
+	at scala.collection.immutable.LazyList$.$anonfun$flatMapImpl$2(LazyList.scala:1084)
+	at scala.collection.immutable.LazyList.scala$collection$immutable$LazyList$$state$lzycompute(LazyList.scala:282)
+	at scala.collection.immutable.LazyList.scala$collection$immutable$LazyList$$state(LazyList.scala:273)
+	at scala.collection.immutable.LazyList.isEmpty(LazyList.scala:292)
+	at scala.collection.immutable.LazyList$LazyIterator.hasNext(LazyList.scala:1274)
+	at scala.collection.mutable.ListBuffer.scala$collection$mutable$ListBuffer$$freshFrom(ListBuffer.scala:131)
+	at scala.collection.mutable.ListBuffer$.from(ListBuffer.scala:415)
+	at io.joern.console.workspacehandling.WorkspaceLoader.load(WorkspaceLoader.scala:23)
+	at io.joern.console.workspacehandling.WorkspaceManager.<init>(WorkspaceManager.scala:39)
+	at io.joern.console.Console.switchWorkspace(Console.scala:118)
+	at io.joern.console.Console.<init>(Console.scala:34)
+	at io.joern.joerncli.console.JoernConsole.<init>(JoernConsole.scala:23)
+	at io.joern.joerncli.console.Joern$.<init>(Joern.scala:3)
+	at io.joern.joerncli.console.Joern$.<clinit>(Joern.scala:3)
+	at ScalaReplPP$.<clinit>(wrapped-script912797905795842047.sc:219)
+	at ScalaReplPP.main(wrapped-script912797905795842047.sc)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at replpp.scripting.ScriptingDriver.$anonfun$2(ScriptingDriver.scala:60)
+	at replpp.util.SimpleDriver.compile$$anonfun$1(SimpleDriver.scala:81)
+	at scala.util.Try$.apply(Try.scala:217)
+	at replpp.util.SimpleDriver.compile(SimpleDriver.scala:83)
+	at replpp.scripting.ScriptingDriver.compileAndRun(ScriptingDriver.scala:53)
+	at replpp.scripting.NonForkingScriptRunner$.exec(NonForkingScriptRunner.scala:48)
+	at replpp.scripting.NonForkingScriptRunner$.main(NonForkingScriptRunner.scala:21)
+	at replpp.scripting.NonForkingScriptRunner.main(NonForkingScriptRunner.scala)
+Creating project `joern-trace-4bf916ab-4124-43b8-a478-7d084b638b35` for CPG at `/home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin`
+Creating working copy of CPG to be safe
+Loading base CPG from: /home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-4bf916ab-4124-43b8-a478-7d084b638b35/cpg.bin.tmp
+[INFO ] initialising from existing storage (/home/swlab-jueon/swvul/tools/joern-juliet-slicer/workspace/joern-trace-4bf916ab-4124-43b8-a478-7d084b638b35/cpg.bin.tmp)
+Overlay dataflowOss already exists - skipping
+The graph has been modified. You may want to use the `save` command to persist changes to disk.  All changes will also be saved collectively on exit
+
+=== Analysis Target ===
+CPG         : /home/swlab-jueon/swvul/tools/joern-juliet-slicer/output/CPG/cwe15_cpg/cwe15-441-cpg-resolved.bin
+Source      : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java:137 (3 CFG node(s))
+Sink        : CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java:78 (3 CFG node(s))
+Slice depth : 8
+
+=== Source-to-Sink Search Started ===
+Source-to-Sink search completed: 0.094 seconds
+
+=== Source-to-Sink Trace ===
+
+[0] line=137 | data = "foo"
+        ↓
+[1] line=140 | dataLinkedList.add(0, data)
+        ↓
+[2] line=141 | dataLinkedList.add(1, data)
+        ↓
+[3] line=142 | dataLinkedList.add(2, data)
+        ↓
+[4] line=143 | this.goodG2BSink(dataLinkedList)
+        ↓
+[5] line=66 | goodG2BSink(this, LinkedList<String> dataLinkedList)
+        ↓
+[6] line=68 | dataLinkedList.remove(2)
+        ↓
+[7] line=68 | String data = dataLinkedList.remove(2)
+        ↓
+[8] line=78 | dbConnection.setCatalog(data)
+
+=== DDG + CDG Backward Slice Started (depth=8) ===
+
+=== DDG + CDG Backward Slice ===
+
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=137, col=9 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=137, col=16 | "foo"
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=139, col=28 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=139, col=45 | new LinkedList<String>()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=140, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=140, col=28 | 0
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=140, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=141, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=141, col=28 | 1
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=141, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=142, col=9 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=142, col=28 | 2
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=142, col=31 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73a.java | line=143, col=103 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=66, col=29 | LinkedList<String> dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=68, col=16 | data
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=68, col=23 | dataLinkedList
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=68, col=23 | dataLinkedList.remove(2)
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=68, col=45 | 2
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=72, col=9 | try
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=74, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=74, col=28 | IO.getDBConnection()
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=74, col=28 | IO
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=78, col=13 | dbConnection
+src/main/java/juliet/testcases/CWE15_External_Control_of_System_or_Configuration_Setting/CWE15_External_Control_of_System_or_Configuration_Setting__listen_tcp_73b.java | line=78, col=37 | data
+
+=== PDG Slice Summary ===
+Slice depth       : 8
+Flow nodes        : 12
+Data nodes        : 25
+Control nodes     : 0
+Control DDG nodes : 0
+AST controls      : 1
+Final slice nodes : 26
+Slice time        : 0.013 seconds
+
+=== Summary ===
+Raw paths    : 6
+Unique traces: 1
+Flow time    : 0.094 seconds
