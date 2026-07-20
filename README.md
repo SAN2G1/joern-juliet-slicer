@@ -3,7 +3,7 @@
 쉽게 따라하는 Joern juliet slicer 사용기 
 
 1. java 17을 깐다. 
-2. java_sard_source_sink 파일을 프로젝트 루트에 가져온다. 
+2. java_sard_source_sink 파일을 프로젝트 루트에 가져온다. (이건 이미 xml 추출 다해놔서 안해도 됩니다)
 3. joern은 설치해두고 joern이 설치된 폴더를 기억해둔다. (**매우 중요 절대 경로 가져올 것**) 
 4. setting.sh 파일에 상단의 환경 변수 내용을 자신의 환경에 맞게 수정 한다. 
    script/run_pdg_slice.sh 을 실행할 때 환경 변수 PATH를 joern-cli에 맞게 수정 한다.(joern/joern-cli 으로 끝나는거)
