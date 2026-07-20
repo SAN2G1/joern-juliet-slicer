@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # 사용 전 수정이 필요한 부분
+# script 폴더 아래에 .sc 파일에도 수정해야할 부분이 존재
 JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
 JOERN_HOME="$HOME/Documents/swvul/joern/joern-cli"
