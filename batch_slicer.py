@@ -12,6 +12,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
@@ -262,6 +263,7 @@ def slice_one_cpg(
 
 
 def run_batch(args: argparse.Namespace) -> int:
+    started_at = time.perf_counter()
     cpg_dir = args.cpg_dir.expanduser().resolve()
     if not cpg_dir.is_dir():
         raise FileNotFoundError(f"CPG directory not found: {cpg_dir}")
@@ -369,7 +371,9 @@ def run_batch(args: argparse.Namespace) -> int:
     if sys.stdout.isatty():
         print()
     print()
+    elapsed_seconds = time.perf_counter() - started_at
     print(f"Complete: {saved} saved, {skipped} skipped, {failed} with failures")
+    print(f"Total time: {elapsed_seconds:.3f} seconds")
     print(f"Results : {output_dir}")
     return 1 if failed else 0
 
