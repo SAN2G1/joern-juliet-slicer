@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-
+# Add joern-cli to PATH
 export PATH="$PATH:/home/swlab/Documents/swvul/joern/joern-cli"
 
 

@@ -9,7 +9,7 @@ import scala.collection.mutable
 /*
  * DDG backward 탐색 최대 깊이
  */
-val SliceDepth = 8
+val SliceDepth = 20
 
 
 /*
