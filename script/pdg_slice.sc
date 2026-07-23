@@ -1,4 +1,8 @@
 import io.joern.dataflowengineoss.language.*
+import io.joern.dataflowengineoss.queryengine.{
+  EngineConfig,
+  EngineContext
+}
 import io.shiftleft.semanticcpg.language.*
 import io.shiftleft.codepropertygraph.generated.nodes.CfgNode
 import java.util.UUID
@@ -10,6 +14,12 @@ import scala.collection.mutable
  * DDG backward 탐색 최대 깊이
  */
 val SliceDepth = 20
+
+
+/*
+ * Source-to-Sink 탐색에서 허용할 interprocedural call depth
+ */
+val MaxCallDepth = 10
 
 
 /*
@@ -254,6 +264,7 @@ def backwardDdg(
       s"Sink        : $sinkFile:$sinkLine " +
         s"(${sinkNodes.size} CFG node(s))"
     )
+    println(s"Call depth  : $MaxCallDepth")
     println(s"Slice depth : $SliceDepth")
 
     /*
@@ -265,10 +276,59 @@ def backwardDdg(
     val flowSearchStartedAt =
       System.nanoTime()
 
-    val rawFlows =
+    val engineContext =
+      EngineContext(
+        config =
+          EngineConfig(
+            maxCallDepth = MaxCallDepth
+          )
+      )
+
+    val directRawFlows =
       sinkNodes.iterator
-        .reachableByFlows(sourceNodes)
+        .reachableByFlows(sourceNodes)(
+          using engineContext
+        )
         .l
+
+    /*
+     * Java 배열 인덱스처럼 값이 주소 계산에만 사용되는 경우,
+     * dataflowOss가 IDENTIFIER 사용 지점에 REACHING_DEF/DDG edge를
+     * 만들지 않을 수 있다. 이때 sink 식별자의 REF 대상 선언을
+     * 보조 endpoint로 사용한다.
+     */
+    val sinkReferenceTargets =
+      sinkNodes.iterator
+        .isIdentifier
+        .refOut
+        .isCfgNode
+        .dedup
+        .l
+
+    val referenceRawFlows =
+      if (
+        directRawFlows.isEmpty &&
+        sinkReferenceTargets.nonEmpty
+      ) {
+        sinkReferenceTargets.iterator
+          .reachableByFlows(sourceNodes)(
+            using engineContext
+          )
+          .l
+      } else {
+        Nil
+      }
+
+    val usedReferenceFallback =
+      directRawFlows.isEmpty &&
+        referenceRawFlows.nonEmpty
+
+    val rawFlows =
+      if (directRawFlows.nonEmpty) {
+        directRawFlows
+      } else {
+        referenceRawFlows
+      }
 
     val flowSearchSeconds =
       (
@@ -287,15 +347,46 @@ def backwardDdg(
         _.resultPairs()
       )
 
+    val sinkDisplayCode =
+      sinkNodes
+        .map(_.code)
+        .maxByOption(_.length)
+        .getOrElse("<sink>")
+
     val uniqueFlows =
-      uniqueFlowObjects.map(
-        _.resultPairs()
-      )
+      uniqueFlowObjects.map { flow =>
+        val pairs = flow.resultPairs()
+
+        if (
+          usedReferenceFallback &&
+          !pairs.lastOption.contains(
+            (
+              sinkDisplayCode,
+              Some(sinkLine)
+            )
+          )
+        ) {
+          pairs :+
+            (
+              sinkDisplayCode,
+              Some(sinkLine)
+            )
+        } else {
+          pairs
+        }
+      }
 
     println(
       f"Source-to-Sink search completed: " +
         f"$flowSearchSeconds%.3f seconds"
     )
+
+    if (usedReferenceFallback) {
+      println(
+        "Sink REF fallback used: " +
+          "the sink identifier has no DDG incoming edge"
+      )
+    }
 
     println()
 
@@ -355,12 +446,20 @@ def backwardDdg(
        * 2. 중복 제거된 Source -> Sink Flow의 CFG 노드를 추출한다.
        */
       val flowNodes =
-        uniqueFlowObjects
-          .flatMap(_.elements)
-          .iterator
-          .isCfgNode
-          .dedup
-          .l
+        distinctById(
+          uniqueFlowObjects
+            .flatMap(_.elements)
+            .iterator
+            .isCfgNode
+            .l ++
+            (
+              if (usedReferenceFallback) {
+                sinkNodes
+              } else {
+                Nil
+              }
+            )
+        )
 
       /*
        * 3. Flow 노드에 영향을 주는 DDG predecessor를 추가한다.
@@ -488,6 +587,8 @@ def backwardDdg(
 
     println()
     println("=== Summary ===")
+    println(s"Direct paths : ${directRawFlows.size}")
+    println(s"REF paths    : ${referenceRawFlows.size}")
     println(s"Raw paths    : ${rawFlows.size}")
     println(s"Unique traces: ${uniqueFlows.size}")
     println(
